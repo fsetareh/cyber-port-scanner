@@ -1,24 +1,24 @@
 === Cybersecurity Port Scanner Report V6 ===
 
-Target: 127.0.0.1
+Target: scanme.nmap.org
 Total Ports Scanned: 15
-Open Ports: 2
+Open Ports: 3
 High Risk Open Ports: 1
-Medium Risk Open Ports: 1
+Medium Risk Open Ports: 0
 
 === Detailed Results ===
 
 Port: 21
 Service: FTP
-Status: CLOSED
-Risk: NONE
-Banner: N/A
+Status: OPEN
+Risk: HIGH
+Banner: No banner received
 --------------------------------
 Port: 22
 Service: SSH
-Status: CLOSED
-Risk: NONE
-Banner: N/A
+Status: OPEN
+Risk: LOW
+Banner: SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.13
 --------------------------------
 Port: 23
 Service: Telnet
@@ -40,9 +40,9 @@ Banner: N/A
 --------------------------------
 Port: 80
 Service: HTTP
-Status: CLOSED
-Risk: NONE
-Banner: N/A
+Status: OPEN
+Risk: LOW
+Banner: HTTP/1.1 200 OK
 --------------------------------
 Port: 110
 Service: POP3
@@ -52,9 +52,9 @@ Banner: N/A
 --------------------------------
 Port: 135
 Service: Windows RPC
-Status: OPEN
-Risk: MEDIUM
-Banner: No banner received
+Status: CLOSED
+Risk: NONE
+Banner: N/A
 --------------------------------
 Port: 139
 Service: NetBIOS
@@ -76,9 +76,9 @@ Banner: N/A
 --------------------------------
 Port: 445
 Service: SMB
-Status: OPEN
-Risk: HIGH
-Banner: No banner received
+Status: CLOSED
+Risk: NONE
+Banner: N/A
 --------------------------------
 Port: 3306
 Service: MySQL
@@ -101,5 +101,4 @@ Banner: N/A
 
 === Security Notes ===
 
-NOTICE: Port 135 (Windows RPC) is open and should be reviewed.
-WARNING: Port 445 (SMB) is open and considered high risk.
+WARNING: Port 21 (FTP) is open and considered high risk.

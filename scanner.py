@@ -8,7 +8,10 @@ from colorama import Fore, init
 
 init(autoreset=True)
 
-TARGET = "127.0.0.1"
+TARGET = input("Enter target IP or domain: ").strip()
+
+if TARGET == "":
+    TARGET = "127.0.0.1"
 
 PORTS = {
     21: "FTP",
