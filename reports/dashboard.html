@@ -1,0 +1,904 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cyber Port Scanner Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111827;
+            color: #f9fafb;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #38bdf8;
+        }
+        .card {
+            background-color: #1f2937;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #1f2937;
+        }
+        th, td {
+            border: 1px solid #374151;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #0f172a;
+        }
+        .HIGH {
+            color: #f87171;
+            font-weight: bold;
+        }
+        .MEDIUM {
+            color: #facc15;
+            font-weight: bold;
+        }
+        .LOW {
+            color: #4ade80;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cybersecurity Port Scanner Report</h1>
+
+    <div class="card">
+        <p><strong>Scan Time:</strong> 2026-05-17 18:31:38</p>
+        <p><strong>Scan Duration:</strong> 42.71 seconds</p>
+        <p><strong>Security Score:</strong> 0/100</p>
+        <p><strong>Targets Scanned:</strong> 5</p>
+        <p><strong>Open Ports:</strong> 10</p>
+        <p><strong>High Risk Findings:</strong> 5</p>
+        <p><strong>Medium Risk Findings:</strong> 5</p>
+        <p><strong>Vulnerability Findings:</strong> 10</p>
+    </div>
+
+    <h2>Detailed Findings</h2>
+
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>Target</th>
+            <th>Port</th>
+            <th>Service</th>
+            <th>Status</th>
+            <th>Risk</th>
+            <th>Vulnerability</th>
+            <th>CVE-Style Tag</th>
+        </tr>
+
+        <tr>
+            <td>18:32:11</td>
+            <td>127.0.0.1</td>
+            <td>21</td>
+            <td>FTP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:11</td>
+            <td>127.0.0.1</td>
+            <td>22</td>
+            <td>SSH</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:11</td>
+            <td>127.0.0.1</td>
+            <td>23</td>
+            <td>Telnet</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:11</td>
+            <td>127.0.0.1</td>
+            <td>25</td>
+            <td>SMTP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:11</td>
+            <td>127.0.0.1</td>
+            <td>53</td>
+            <td>DNS</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:11</td>
+            <td>127.0.0.1</td>
+            <td>80</td>
+            <td>HTTP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:11</td>
+            <td>127.0.0.1</td>
+            <td>110</td>
+            <td>POP3</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:11</td>
+            <td>127.0.0.1</td>
+            <td>135</td>
+            <td>Windows RPC</td>
+            <td>OPEN</td>
+            <td class="MEDIUM">MEDIUM</td>
+            <td>Windows RPC exposure should be reviewed.</td>
+            <td>RPC-EXPOSURE-RISK</td>
+        </tr>
+
+        <tr>
+            <td>18:32:11</td>
+            <td>127.0.0.1</td>
+            <td>139</td>
+            <td>NetBIOS</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:11</td>
+            <td>127.0.0.1</td>
+            <td>143</td>
+            <td>IMAP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:11</td>
+            <td>127.0.0.1</td>
+            <td>443</td>
+            <td>HTTPS</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:11</td>
+            <td>127.0.0.1</td>
+            <td>445</td>
+            <td>SMB</td>
+            <td>OPEN</td>
+            <td class="HIGH">HIGH</td>
+            <td>SMB is commonly targeted by ransomware.</td>
+            <td>SMB-RANSOMWARE-TARGET</td>
+        </tr>
+
+        <tr>
+            <td>18:32:11</td>
+            <td>127.0.0.1</td>
+            <td>3306</td>
+            <td>MySQL</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:11</td>
+            <td>127.0.0.1</td>
+            <td>3389</td>
+            <td>RDP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:11</td>
+            <td>127.0.0.1</td>
+            <td>8000</td>
+            <td>HTTP/Python Server</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:13</td>
+            <td>127.0.0.2</td>
+            <td>21</td>
+            <td>FTP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:13</td>
+            <td>127.0.0.2</td>
+            <td>22</td>
+            <td>SSH</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:13</td>
+            <td>127.0.0.2</td>
+            <td>23</td>
+            <td>Telnet</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:13</td>
+            <td>127.0.0.2</td>
+            <td>25</td>
+            <td>SMTP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:13</td>
+            <td>127.0.0.2</td>
+            <td>53</td>
+            <td>DNS</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:13</td>
+            <td>127.0.0.2</td>
+            <td>80</td>
+            <td>HTTP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:13</td>
+            <td>127.0.0.2</td>
+            <td>110</td>
+            <td>POP3</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:13</td>
+            <td>127.0.0.2</td>
+            <td>135</td>
+            <td>Windows RPC</td>
+            <td>OPEN</td>
+            <td class="MEDIUM">MEDIUM</td>
+            <td>Windows RPC exposure should be reviewed.</td>
+            <td>RPC-EXPOSURE-RISK</td>
+        </tr>
+
+        <tr>
+            <td>18:32:13</td>
+            <td>127.0.0.2</td>
+            <td>139</td>
+            <td>NetBIOS</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:13</td>
+            <td>127.0.0.2</td>
+            <td>143</td>
+            <td>IMAP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:13</td>
+            <td>127.0.0.2</td>
+            <td>443</td>
+            <td>HTTPS</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:13</td>
+            <td>127.0.0.2</td>
+            <td>445</td>
+            <td>SMB</td>
+            <td>OPEN</td>
+            <td class="HIGH">HIGH</td>
+            <td>SMB is commonly targeted by ransomware.</td>
+            <td>SMB-RANSOMWARE-TARGET</td>
+        </tr>
+
+        <tr>
+            <td>18:32:13</td>
+            <td>127.0.0.2</td>
+            <td>3306</td>
+            <td>MySQL</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:13</td>
+            <td>127.0.0.2</td>
+            <td>3389</td>
+            <td>RDP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:13</td>
+            <td>127.0.0.2</td>
+            <td>8000</td>
+            <td>HTTP/Python Server</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:15</td>
+            <td>127.0.0.3</td>
+            <td>21</td>
+            <td>FTP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:15</td>
+            <td>127.0.0.3</td>
+            <td>22</td>
+            <td>SSH</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:15</td>
+            <td>127.0.0.3</td>
+            <td>23</td>
+            <td>Telnet</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:15</td>
+            <td>127.0.0.3</td>
+            <td>25</td>
+            <td>SMTP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:15</td>
+            <td>127.0.0.3</td>
+            <td>53</td>
+            <td>DNS</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:15</td>
+            <td>127.0.0.3</td>
+            <td>80</td>
+            <td>HTTP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:15</td>
+            <td>127.0.0.3</td>
+            <td>110</td>
+            <td>POP3</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:15</td>
+            <td>127.0.0.3</td>
+            <td>135</td>
+            <td>Windows RPC</td>
+            <td>OPEN</td>
+            <td class="MEDIUM">MEDIUM</td>
+            <td>Windows RPC exposure should be reviewed.</td>
+            <td>RPC-EXPOSURE-RISK</td>
+        </tr>
+
+        <tr>
+            <td>18:32:15</td>
+            <td>127.0.0.3</td>
+            <td>139</td>
+            <td>NetBIOS</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:15</td>
+            <td>127.0.0.3</td>
+            <td>143</td>
+            <td>IMAP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:15</td>
+            <td>127.0.0.3</td>
+            <td>443</td>
+            <td>HTTPS</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:15</td>
+            <td>127.0.0.3</td>
+            <td>445</td>
+            <td>SMB</td>
+            <td>OPEN</td>
+            <td class="HIGH">HIGH</td>
+            <td>SMB is commonly targeted by ransomware.</td>
+            <td>SMB-RANSOMWARE-TARGET</td>
+        </tr>
+
+        <tr>
+            <td>18:32:15</td>
+            <td>127.0.0.3</td>
+            <td>3306</td>
+            <td>MySQL</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:15</td>
+            <td>127.0.0.3</td>
+            <td>3389</td>
+            <td>RDP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:15</td>
+            <td>127.0.0.3</td>
+            <td>8000</td>
+            <td>HTTP/Python Server</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:17</td>
+            <td>127.0.0.4</td>
+            <td>21</td>
+            <td>FTP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:17</td>
+            <td>127.0.0.4</td>
+            <td>22</td>
+            <td>SSH</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:17</td>
+            <td>127.0.0.4</td>
+            <td>23</td>
+            <td>Telnet</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:17</td>
+            <td>127.0.0.4</td>
+            <td>25</td>
+            <td>SMTP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:17</td>
+            <td>127.0.0.4</td>
+            <td>53</td>
+            <td>DNS</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:17</td>
+            <td>127.0.0.4</td>
+            <td>80</td>
+            <td>HTTP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:17</td>
+            <td>127.0.0.4</td>
+            <td>110</td>
+            <td>POP3</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:17</td>
+            <td>127.0.0.4</td>
+            <td>135</td>
+            <td>Windows RPC</td>
+            <td>OPEN</td>
+            <td class="MEDIUM">MEDIUM</td>
+            <td>Windows RPC exposure should be reviewed.</td>
+            <td>RPC-EXPOSURE-RISK</td>
+        </tr>
+
+        <tr>
+            <td>18:32:17</td>
+            <td>127.0.0.4</td>
+            <td>139</td>
+            <td>NetBIOS</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:17</td>
+            <td>127.0.0.4</td>
+            <td>143</td>
+            <td>IMAP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:17</td>
+            <td>127.0.0.4</td>
+            <td>443</td>
+            <td>HTTPS</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:17</td>
+            <td>127.0.0.4</td>
+            <td>445</td>
+            <td>SMB</td>
+            <td>OPEN</td>
+            <td class="HIGH">HIGH</td>
+            <td>SMB is commonly targeted by ransomware.</td>
+            <td>SMB-RANSOMWARE-TARGET</td>
+        </tr>
+
+        <tr>
+            <td>18:32:17</td>
+            <td>127.0.0.4</td>
+            <td>3306</td>
+            <td>MySQL</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:17</td>
+            <td>127.0.0.4</td>
+            <td>3389</td>
+            <td>RDP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:17</td>
+            <td>127.0.0.4</td>
+            <td>8000</td>
+            <td>HTTP/Python Server</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:19</td>
+            <td>127.0.0.5</td>
+            <td>21</td>
+            <td>FTP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:19</td>
+            <td>127.0.0.5</td>
+            <td>22</td>
+            <td>SSH</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:19</td>
+            <td>127.0.0.5</td>
+            <td>23</td>
+            <td>Telnet</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:19</td>
+            <td>127.0.0.5</td>
+            <td>25</td>
+            <td>SMTP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:19</td>
+            <td>127.0.0.5</td>
+            <td>53</td>
+            <td>DNS</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:19</td>
+            <td>127.0.0.5</td>
+            <td>80</td>
+            <td>HTTP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:19</td>
+            <td>127.0.0.5</td>
+            <td>110</td>
+            <td>POP3</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:19</td>
+            <td>127.0.0.5</td>
+            <td>135</td>
+            <td>Windows RPC</td>
+            <td>OPEN</td>
+            <td class="MEDIUM">MEDIUM</td>
+            <td>Windows RPC exposure should be reviewed.</td>
+            <td>RPC-EXPOSURE-RISK</td>
+        </tr>
+
+        <tr>
+            <td>18:32:19</td>
+            <td>127.0.0.5</td>
+            <td>139</td>
+            <td>NetBIOS</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:19</td>
+            <td>127.0.0.5</td>
+            <td>143</td>
+            <td>IMAP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:19</td>
+            <td>127.0.0.5</td>
+            <td>443</td>
+            <td>HTTPS</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:19</td>
+            <td>127.0.0.5</td>
+            <td>445</td>
+            <td>SMB</td>
+            <td>OPEN</td>
+            <td class="HIGH">HIGH</td>
+            <td>SMB is commonly targeted by ransomware.</td>
+            <td>SMB-RANSOMWARE-TARGET</td>
+        </tr>
+
+        <tr>
+            <td>18:32:19</td>
+            <td>127.0.0.5</td>
+            <td>3306</td>
+            <td>MySQL</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:19</td>
+            <td>127.0.0.5</td>
+            <td>3389</td>
+            <td>RDP</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+        <tr>
+            <td>18:32:19</td>
+            <td>127.0.0.5</td>
+            <td>8000</td>
+            <td>HTTP/Python Server</td>
+            <td>CLOSED</td>
+            <td class="NONE">NONE</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+    </table>
+</body>
+</html>

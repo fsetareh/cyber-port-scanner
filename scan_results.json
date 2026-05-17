@@ -1,7 +1,14 @@
 {
-    "scan_time": "2026-05-17 17:56:28",
-    "scan_duration_seconds": 23.71,
-    "security_score": 0,
+    "summary": {
+        "scan_time": "2026-05-17 18:31:38",
+        "scan_duration": 42.71,
+        "security_score": 0,
+        "targets_scanned": 5,
+        "open_ports": 10,
+        "high_risk": 5,
+        "medium_risk": 5,
+        "vulnerabilities": 10
+    },
     "targets_scanned": [
         "127.0.0.1",
         "127.0.0.2",
@@ -9,16 +16,9 @@
         "127.0.0.4",
         "127.0.0.5"
     ],
-    "summary": {
-        "total_results": 75,
-        "open_ports": 10,
-        "high_risk_findings": 5,
-        "medium_risk_findings": 5,
-        "vulnerability_findings": 10
-    },
     "results": [
         {
-            "timestamp": "17:56:41",
+            "timestamp": "18:32:11",
             "target": "127.0.0.1",
             "port": 21,
             "service": "FTP",
@@ -27,10 +27,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:41",
+            "timestamp": "18:32:11",
             "target": "127.0.0.1",
             "port": 22,
             "service": "SSH",
@@ -39,10 +40,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:41",
+            "timestamp": "18:32:11",
             "target": "127.0.0.1",
             "port": 23,
             "service": "Telnet",
@@ -51,10 +53,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:41",
+            "timestamp": "18:32:11",
             "target": "127.0.0.1",
             "port": 25,
             "service": "SMTP",
@@ -63,10 +66,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:41",
+            "timestamp": "18:32:11",
             "target": "127.0.0.1",
             "port": 53,
             "service": "DNS",
@@ -75,10 +79,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:41",
+            "timestamp": "18:32:11",
             "target": "127.0.0.1",
             "port": 80,
             "service": "HTTP",
@@ -87,10 +92,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:41",
+            "timestamp": "18:32:11",
             "target": "127.0.0.1",
             "port": 110,
             "service": "POP3",
@@ -99,10 +105,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:41",
+            "timestamp": "18:32:11",
             "target": "127.0.0.1",
             "port": 135,
             "service": "Windows RPC",
@@ -111,10 +118,11 @@
             "warning": "Windows RPC exposure should be reviewed.",
             "vulnerability": "Windows RPC exposure should be reviewed.",
             "cve_style_tag": "RPC-EXPOSURE-RISK",
+            "explanation": "Windows RPC on port 135 should be reviewed and protected with firewall rules.",
             "banner": "No banner received"
         },
         {
-            "timestamp": "17:56:41",
+            "timestamp": "18:32:11",
             "target": "127.0.0.1",
             "port": 139,
             "service": "NetBIOS",
@@ -123,10 +131,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:41",
+            "timestamp": "18:32:11",
             "target": "127.0.0.1",
             "port": 143,
             "service": "IMAP",
@@ -135,10 +144,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:41",
+            "timestamp": "18:32:11",
             "target": "127.0.0.1",
             "port": 443,
             "service": "HTTPS",
@@ -147,10 +157,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:41",
+            "timestamp": "18:32:11",
             "target": "127.0.0.1",
             "port": 445,
             "service": "SMB",
@@ -159,10 +170,11 @@
             "warning": "SMB is commonly targeted by ransomware.",
             "vulnerability": "SMB is commonly targeted by ransomware.",
             "cve_style_tag": "SMB-RANSOMWARE-TARGET",
+            "explanation": "SMB on port 445 should be reviewed immediately because it may expose sensitive network services.",
             "banner": "No banner received"
         },
         {
-            "timestamp": "17:56:41",
+            "timestamp": "18:32:11",
             "target": "127.0.0.1",
             "port": 3306,
             "service": "MySQL",
@@ -171,10 +183,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:41",
+            "timestamp": "18:32:11",
             "target": "127.0.0.1",
             "port": 3389,
             "service": "RDP",
@@ -183,10 +196,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:41",
+            "timestamp": "18:32:11",
             "target": "127.0.0.1",
             "port": 8000,
             "service": "HTTP/Python Server",
@@ -195,10 +209,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:44",
+            "timestamp": "18:32:13",
             "target": "127.0.0.2",
             "port": 21,
             "service": "FTP",
@@ -207,10 +222,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:44",
+            "timestamp": "18:32:13",
             "target": "127.0.0.2",
             "port": 22,
             "service": "SSH",
@@ -219,10 +235,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:44",
+            "timestamp": "18:32:13",
             "target": "127.0.0.2",
             "port": 23,
             "service": "Telnet",
@@ -231,10 +248,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:44",
+            "timestamp": "18:32:13",
             "target": "127.0.0.2",
             "port": 25,
             "service": "SMTP",
@@ -243,10 +261,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:44",
+            "timestamp": "18:32:13",
             "target": "127.0.0.2",
             "port": 53,
             "service": "DNS",
@@ -255,10 +274,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:44",
+            "timestamp": "18:32:13",
             "target": "127.0.0.2",
             "port": 80,
             "service": "HTTP",
@@ -267,10 +287,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:44",
+            "timestamp": "18:32:13",
             "target": "127.0.0.2",
             "port": 110,
             "service": "POP3",
@@ -279,10 +300,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:44",
+            "timestamp": "18:32:13",
             "target": "127.0.0.2",
             "port": 135,
             "service": "Windows RPC",
@@ -291,10 +313,11 @@
             "warning": "Windows RPC exposure should be reviewed.",
             "vulnerability": "Windows RPC exposure should be reviewed.",
             "cve_style_tag": "RPC-EXPOSURE-RISK",
+            "explanation": "Windows RPC on port 135 should be reviewed and protected with firewall rules.",
             "banner": "No banner received"
         },
         {
-            "timestamp": "17:56:44",
+            "timestamp": "18:32:13",
             "target": "127.0.0.2",
             "port": 139,
             "service": "NetBIOS",
@@ -303,10 +326,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:44",
+            "timestamp": "18:32:13",
             "target": "127.0.0.2",
             "port": 143,
             "service": "IMAP",
@@ -315,10 +339,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:44",
+            "timestamp": "18:32:13",
             "target": "127.0.0.2",
             "port": 443,
             "service": "HTTPS",
@@ -327,10 +352,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:44",
+            "timestamp": "18:32:13",
             "target": "127.0.0.2",
             "port": 445,
             "service": "SMB",
@@ -339,10 +365,11 @@
             "warning": "SMB is commonly targeted by ransomware.",
             "vulnerability": "SMB is commonly targeted by ransomware.",
             "cve_style_tag": "SMB-RANSOMWARE-TARGET",
+            "explanation": "SMB on port 445 should be reviewed immediately because it may expose sensitive network services.",
             "banner": "No banner received"
         },
         {
-            "timestamp": "17:56:44",
+            "timestamp": "18:32:13",
             "target": "127.0.0.2",
             "port": 3306,
             "service": "MySQL",
@@ -351,10 +378,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:44",
+            "timestamp": "18:32:13",
             "target": "127.0.0.2",
             "port": 3389,
             "service": "RDP",
@@ -363,10 +391,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:44",
+            "timestamp": "18:32:13",
             "target": "127.0.0.2",
             "port": 8000,
             "service": "HTTP/Python Server",
@@ -375,10 +404,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:46",
+            "timestamp": "18:32:15",
             "target": "127.0.0.3",
             "port": 21,
             "service": "FTP",
@@ -387,10 +417,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:46",
+            "timestamp": "18:32:15",
             "target": "127.0.0.3",
             "port": 22,
             "service": "SSH",
@@ -399,10 +430,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:46",
+            "timestamp": "18:32:15",
             "target": "127.0.0.3",
             "port": 23,
             "service": "Telnet",
@@ -411,10 +443,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:46",
+            "timestamp": "18:32:15",
             "target": "127.0.0.3",
             "port": 25,
             "service": "SMTP",
@@ -423,10 +456,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:46",
+            "timestamp": "18:32:15",
             "target": "127.0.0.3",
             "port": 53,
             "service": "DNS",
@@ -435,10 +469,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:46",
+            "timestamp": "18:32:15",
             "target": "127.0.0.3",
             "port": 80,
             "service": "HTTP",
@@ -447,10 +482,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:46",
+            "timestamp": "18:32:15",
             "target": "127.0.0.3",
             "port": 110,
             "service": "POP3",
@@ -459,10 +495,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:46",
+            "timestamp": "18:32:15",
             "target": "127.0.0.3",
             "port": 135,
             "service": "Windows RPC",
@@ -471,10 +508,11 @@
             "warning": "Windows RPC exposure should be reviewed.",
             "vulnerability": "Windows RPC exposure should be reviewed.",
             "cve_style_tag": "RPC-EXPOSURE-RISK",
+            "explanation": "Windows RPC on port 135 should be reviewed and protected with firewall rules.",
             "banner": "No banner received"
         },
         {
-            "timestamp": "17:56:46",
+            "timestamp": "18:32:15",
             "target": "127.0.0.3",
             "port": 139,
             "service": "NetBIOS",
@@ -483,10 +521,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:46",
+            "timestamp": "18:32:15",
             "target": "127.0.0.3",
             "port": 143,
             "service": "IMAP",
@@ -495,10 +534,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:46",
+            "timestamp": "18:32:15",
             "target": "127.0.0.3",
             "port": 443,
             "service": "HTTPS",
@@ -507,10 +547,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:46",
+            "timestamp": "18:32:15",
             "target": "127.0.0.3",
             "port": 445,
             "service": "SMB",
@@ -519,10 +560,11 @@
             "warning": "SMB is commonly targeted by ransomware.",
             "vulnerability": "SMB is commonly targeted by ransomware.",
             "cve_style_tag": "SMB-RANSOMWARE-TARGET",
+            "explanation": "SMB on port 445 should be reviewed immediately because it may expose sensitive network services.",
             "banner": "No banner received"
         },
         {
-            "timestamp": "17:56:46",
+            "timestamp": "18:32:15",
             "target": "127.0.0.3",
             "port": 3306,
             "service": "MySQL",
@@ -531,10 +573,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:46",
+            "timestamp": "18:32:15",
             "target": "127.0.0.3",
             "port": 3389,
             "service": "RDP",
@@ -543,10 +586,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:46",
+            "timestamp": "18:32:15",
             "target": "127.0.0.3",
             "port": 8000,
             "service": "HTTP/Python Server",
@@ -555,10 +599,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:48",
+            "timestamp": "18:32:17",
             "target": "127.0.0.4",
             "port": 21,
             "service": "FTP",
@@ -567,10 +612,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:48",
+            "timestamp": "18:32:17",
             "target": "127.0.0.4",
             "port": 22,
             "service": "SSH",
@@ -579,10 +625,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:48",
+            "timestamp": "18:32:17",
             "target": "127.0.0.4",
             "port": 23,
             "service": "Telnet",
@@ -591,10 +638,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:48",
+            "timestamp": "18:32:17",
             "target": "127.0.0.4",
             "port": 25,
             "service": "SMTP",
@@ -603,10 +651,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:48",
+            "timestamp": "18:32:17",
             "target": "127.0.0.4",
             "port": 53,
             "service": "DNS",
@@ -615,10 +664,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:48",
+            "timestamp": "18:32:17",
             "target": "127.0.0.4",
             "port": 80,
             "service": "HTTP",
@@ -627,10 +677,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:48",
+            "timestamp": "18:32:17",
             "target": "127.0.0.4",
             "port": 110,
             "service": "POP3",
@@ -639,10 +690,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:48",
+            "timestamp": "18:32:17",
             "target": "127.0.0.4",
             "port": 135,
             "service": "Windows RPC",
@@ -651,10 +703,11 @@
             "warning": "Windows RPC exposure should be reviewed.",
             "vulnerability": "Windows RPC exposure should be reviewed.",
             "cve_style_tag": "RPC-EXPOSURE-RISK",
+            "explanation": "Windows RPC on port 135 should be reviewed and protected with firewall rules.",
             "banner": "No banner received"
         },
         {
-            "timestamp": "17:56:48",
+            "timestamp": "18:32:17",
             "target": "127.0.0.4",
             "port": 139,
             "service": "NetBIOS",
@@ -663,10 +716,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:48",
+            "timestamp": "18:32:17",
             "target": "127.0.0.4",
             "port": 143,
             "service": "IMAP",
@@ -675,10 +729,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:48",
+            "timestamp": "18:32:17",
             "target": "127.0.0.4",
             "port": 443,
             "service": "HTTPS",
@@ -687,10 +742,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:48",
+            "timestamp": "18:32:17",
             "target": "127.0.0.4",
             "port": 445,
             "service": "SMB",
@@ -699,10 +755,11 @@
             "warning": "SMB is commonly targeted by ransomware.",
             "vulnerability": "SMB is commonly targeted by ransomware.",
             "cve_style_tag": "SMB-RANSOMWARE-TARGET",
+            "explanation": "SMB on port 445 should be reviewed immediately because it may expose sensitive network services.",
             "banner": "No banner received"
         },
         {
-            "timestamp": "17:56:48",
+            "timestamp": "18:32:17",
             "target": "127.0.0.4",
             "port": 3306,
             "service": "MySQL",
@@ -711,10 +768,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:48",
+            "timestamp": "18:32:17",
             "target": "127.0.0.4",
             "port": 3389,
             "service": "RDP",
@@ -723,10 +781,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:48",
+            "timestamp": "18:32:17",
             "target": "127.0.0.4",
             "port": 8000,
             "service": "HTTP/Python Server",
@@ -735,10 +794,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:50",
+            "timestamp": "18:32:19",
             "target": "127.0.0.5",
             "port": 21,
             "service": "FTP",
@@ -747,10 +807,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:50",
+            "timestamp": "18:32:19",
             "target": "127.0.0.5",
             "port": 22,
             "service": "SSH",
@@ -759,10 +820,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:50",
+            "timestamp": "18:32:19",
             "target": "127.0.0.5",
             "port": 23,
             "service": "Telnet",
@@ -771,10 +833,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:50",
+            "timestamp": "18:32:19",
             "target": "127.0.0.5",
             "port": 25,
             "service": "SMTP",
@@ -783,10 +846,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:50",
+            "timestamp": "18:32:19",
             "target": "127.0.0.5",
             "port": 53,
             "service": "DNS",
@@ -795,10 +859,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:50",
+            "timestamp": "18:32:19",
             "target": "127.0.0.5",
             "port": 80,
             "service": "HTTP",
@@ -807,10 +872,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:50",
+            "timestamp": "18:32:19",
             "target": "127.0.0.5",
             "port": 110,
             "service": "POP3",
@@ -819,10 +885,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:50",
+            "timestamp": "18:32:19",
             "target": "127.0.0.5",
             "port": 135,
             "service": "Windows RPC",
@@ -831,10 +898,11 @@
             "warning": "Windows RPC exposure should be reviewed.",
             "vulnerability": "Windows RPC exposure should be reviewed.",
             "cve_style_tag": "RPC-EXPOSURE-RISK",
+            "explanation": "Windows RPC on port 135 should be reviewed and protected with firewall rules.",
             "banner": "No banner received"
         },
         {
-            "timestamp": "17:56:50",
+            "timestamp": "18:32:19",
             "target": "127.0.0.5",
             "port": 139,
             "service": "NetBIOS",
@@ -843,10 +911,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:50",
+            "timestamp": "18:32:19",
             "target": "127.0.0.5",
             "port": 143,
             "service": "IMAP",
@@ -855,10 +924,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:50",
+            "timestamp": "18:32:19",
             "target": "127.0.0.5",
             "port": 443,
             "service": "HTTPS",
@@ -867,10 +937,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:50",
+            "timestamp": "18:32:19",
             "target": "127.0.0.5",
             "port": 445,
             "service": "SMB",
@@ -879,10 +950,11 @@
             "warning": "SMB is commonly targeted by ransomware.",
             "vulnerability": "SMB is commonly targeted by ransomware.",
             "cve_style_tag": "SMB-RANSOMWARE-TARGET",
+            "explanation": "SMB on port 445 should be reviewed immediately because it may expose sensitive network services.",
             "banner": "No banner received"
         },
         {
-            "timestamp": "17:56:50",
+            "timestamp": "18:32:19",
             "target": "127.0.0.5",
             "port": 3306,
             "service": "MySQL",
@@ -891,10 +963,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:50",
+            "timestamp": "18:32:19",
             "target": "127.0.0.5",
             "port": 3389,
             "service": "RDP",
@@ -903,10 +976,11 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         },
         {
-            "timestamp": "17:56:50",
+            "timestamp": "18:32:19",
             "target": "127.0.0.5",
             "port": 8000,
             "service": "HTTP/Python Server",
@@ -915,6 +989,7 @@
             "warning": "N/A",
             "vulnerability": "N/A",
             "cve_style_tag": "N/A",
+            "explanation": "N/A",
             "banner": "N/A"
         }
     ]

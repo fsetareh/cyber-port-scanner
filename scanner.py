@@ -1,5 +1,5 @@
 # Cybersecurity Port Scanner Project
-# Version 16 - Advanced SOC-Style Scanner
+# Version 20 - SOC Scanner with HTML Dashboard + AI-Style Explanation
 
 import socket
 import threading
@@ -13,39 +13,17 @@ from colorama import Fore, init
 init(autoreset=True)
 
 PORTS = {
-    21: "FTP",
-    22: "SSH",
-    23: "Telnet",
-    25: "SMTP",
-    53: "DNS",
-    80: "HTTP",
-    110: "POP3",
-    135: "Windows RPC",
-    139: "NetBIOS",
-    143: "IMAP",
-    443: "HTTPS",
-    445: "SMB",
-    3306: "MySQL",
-    3389: "RDP",
-    8000: "HTTP/Python Server"
+    21: "FTP", 22: "SSH", 23: "Telnet", 25: "SMTP", 53: "DNS",
+    80: "HTTP", 110: "POP3", 135: "Windows RPC", 139: "NetBIOS",
+    143: "IMAP", 443: "HTTPS", 445: "SMB", 3306: "MySQL",
+    3389: "RDP", 8000: "HTTP/Python Server"
 }
 
 RISK_LEVELS = {
-    21: "HIGH",
-    22: "LOW",
-    23: "HIGH",
-    25: "MEDIUM",
-    53: "LOW",
-    80: "LOW",
-    110: "MEDIUM",
-    135: "MEDIUM",
-    139: "HIGH",
-    143: "LOW",
-    443: "LOW",
-    445: "HIGH",
-    3306: "HIGH",
-    3389: "HIGH",
-    8000: "LOW"
+    21: "HIGH", 22: "LOW", 23: "HIGH", 25: "MEDIUM", 53: "LOW",
+    80: "LOW", 110: "MEDIUM", 135: "MEDIUM", 139: "HIGH",
+    143: "LOW", 443: "LOW", 445: "HIGH", 3306: "HIGH",
+    3389: "HIGH", 8000: "LOW"
 }
 
 VULNERABILITY_WARNINGS = {
@@ -71,10 +49,11 @@ CVE_STYLE_TAGS = {
 results = []
 lock = threading.Lock()
 
+os.makedirs("logs", exist_ok=True)
+os.makedirs("reports", exist_ok=True)
+
 scan_datetime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 scan_start_time = time.time()
-
-os.makedirs("logs", exist_ok=True)
 
 
 def get_risk_color(risk):
@@ -94,6 +73,16 @@ def calculate_security_score(high_count, medium_count, open_count, vuln_count):
     score -= open_count * 1
     score -= vuln_count * 7
     return max(score, 0)
+
+
+def explain_finding(port, service, risk):
+    if risk == "HIGH":
+        return f"{service} on port {port} should be reviewed immediately because it may expose sensitive network services."
+    if risk == "MEDIUM":
+        return f"{service} on port {port} should be reviewed and protected with firewall rules."
+    if risk == "LOW":
+        return f"{service} on port {port} appears lower risk, but it should still be monitored."
+    return "No explanation available."
 
 
 def grab_banner(target, port):
@@ -127,12 +116,13 @@ def scan_port(target, port, service):
             status = "OPEN"
             risk = RISK_LEVELS.get(port, "UNKNOWN")
             warning = VULNERABILITY_WARNINGS.get(port, "No known warning")
-            vulnerability = warning if port in VULNERABILITY_WARNINGS else "No vulnerability detected"
             cve_tag = CVE_STYLE_TAGS.get(port, "N/A")
+            vulnerability = warning if port in VULNERABILITY_WARNINGS else "No vulnerability detected"
+            explanation = explain_finding(port, service, risk)
             banner = grab_banner(target, port)
-            color = get_risk_color(risk)
 
             with lock:
+                color = get_risk_color(risk)
                 print(color + f"[{timestamp}] [OPEN] {target}:{port} | {service} | Risk: {risk}")
 
                 if warning != "No known warning":
@@ -147,6 +137,7 @@ def scan_port(target, port, service):
             warning = "N/A"
             vulnerability = "N/A"
             cve_tag = "N/A"
+            explanation = "N/A"
             banner = "N/A"
 
             with lock:
@@ -165,6 +156,7 @@ def scan_port(target, port, service):
                 "warning": warning,
                 "vulnerability": vulnerability,
                 "cve_style_tag": cve_tag,
+                "explanation": explanation,
                 "banner": banner
             })
 
@@ -180,6 +172,7 @@ def scan_port(target, port, service):
                 "warning": "N/A",
                 "vulnerability": "N/A",
                 "cve_style_tag": "N/A",
+                "explanation": "N/A",
                 "banner": str(error)
             })
 
@@ -202,9 +195,129 @@ def generate_ip_range(base_ip, start, end):
     return [f"{base_ip}{number}" for number in range(start, end + 1)]
 
 
+def export_csv(filename, data):
+    headers = [
+        "Timestamp", "Target", "Port", "Service", "Status", "Risk",
+        "Warning", "Vulnerability", "CVE-Style Tag", "Explanation", "Banner"
+    ]
+
+    with open(filename, "w", newline="", encoding="utf-8") as file:
+        writer = csv.writer(file)
+        writer.writerow(headers)
+
+        for row in data:
+            writer.writerow([
+                row["timestamp"], row["target"], row["port"], row["service"],
+                row["status"], row["risk"], row["warning"], row["vulnerability"],
+                row["cve_style_tag"], row["explanation"], row["banner"]
+            ])
+
+
+def generate_html_report(summary, data):
+    html = f"""
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cyber Port Scanner Report</title>
+    <style>
+        body {{
+            font-family: Arial, sans-serif;
+            background-color: #111827;
+            color: #f9fafb;
+            padding: 20px;
+        }}
+        h1, h2 {{
+            color: #38bdf8;
+        }}
+        .card {{
+            background-color: #1f2937;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }}
+        table {{
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #1f2937;
+        }}
+        th, td {{
+            border: 1px solid #374151;
+            padding: 8px;
+            text-align: left;
+        }}
+        th {{
+            background-color: #0f172a;
+        }}
+        .HIGH {{
+            color: #f87171;
+            font-weight: bold;
+        }}
+        .MEDIUM {{
+            color: #facc15;
+            font-weight: bold;
+        }}
+        .LOW {{
+            color: #4ade80;
+            font-weight: bold;
+        }}
+    </style>
+</head>
+<body>
+    <h1>Cybersecurity Port Scanner Report</h1>
+
+    <div class="card">
+        <p><strong>Scan Time:</strong> {summary["scan_time"]}</p>
+        <p><strong>Scan Duration:</strong> {summary["scan_duration"]} seconds</p>
+        <p><strong>Security Score:</strong> {summary["security_score"]}/100</p>
+        <p><strong>Targets Scanned:</strong> {summary["targets_scanned"]}</p>
+        <p><strong>Open Ports:</strong> {summary["open_ports"]}</p>
+        <p><strong>High Risk Findings:</strong> {summary["high_risk"]}</p>
+        <p><strong>Medium Risk Findings:</strong> {summary["medium_risk"]}</p>
+        <p><strong>Vulnerability Findings:</strong> {summary["vulnerabilities"]}</p>
+    </div>
+
+    <h2>Detailed Findings</h2>
+
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>Target</th>
+            <th>Port</th>
+            <th>Service</th>
+            <th>Status</th>
+            <th>Risk</th>
+            <th>Vulnerability</th>
+            <th>CVE-Style Tag</th>
+        </tr>
+"""
+
+    for row in data:
+        html += f"""
+        <tr>
+            <td>{row["timestamp"]}</td>
+            <td>{row["target"]}</td>
+            <td>{row["port"]}</td>
+            <td>{row["service"]}</td>
+            <td>{row["status"]}</td>
+            <td class="{row["risk"]}">{row["risk"]}</td>
+            <td>{row["vulnerability"]}</td>
+            <td>{row["cve_style_tag"]}</td>
+        </tr>
+"""
+
+    html += """
+    </table>
+</body>
+</html>
+"""
+
+    with open("reports/dashboard.html", "w", encoding="utf-8") as file:
+        file.write(html)
+
+
 print(Fore.CYAN + "=====================================")
-print(Fore.CYAN + " CYBERSECURITY PORT SCANNER V16")
-print(Fore.CYAN + " Advanced SOC-Style Scanner")
+print(Fore.CYAN + " CYBERSECURITY PORT SCANNER V20")
+print(Fore.CYAN + " SOC Dashboard + AI-Style Explanations")
 print(Fore.CYAN + "=====================================")
 
 print("Scan Mode:")
@@ -244,8 +357,7 @@ else:
 
 results.sort(key=lambda row: (row["target"], row["port"]))
 
-scan_end_time = time.time()
-scan_duration = round(scan_end_time - scan_start_time, 2)
+scan_duration = round(time.time() - scan_start_time, 2)
 
 open_ports = [row for row in results if row["status"] == "OPEN"]
 high_risk = [row for row in open_ports if row["risk"] == "HIGH"]
@@ -262,86 +374,36 @@ security_score = calculate_security_score(
     len(vulnerabilities)
 )
 
-csv_headers = [
-    "Timestamp",
-    "Target",
-    "Port",
-    "Service",
-    "Status",
-    "Risk",
-    "Warning",
-    "Vulnerability",
-    "CVE-Style Tag",
-    "Banner"
-]
+summary = {
+    "scan_time": scan_datetime,
+    "scan_duration": scan_duration,
+    "security_score": security_score,
+    "targets_scanned": len(targets_scanned),
+    "open_ports": len(open_ports),
+    "high_risk": len(high_risk),
+    "medium_risk": len(medium_risk),
+    "vulnerabilities": len(vulnerabilities)
+}
 
-with open("scan_results.csv", "w", newline="", encoding="utf-8") as file:
-    writer = csv.writer(file)
-    writer.writerow(csv_headers)
-
-    for row in results:
-        writer.writerow([
-            row["timestamp"],
-            row["target"],
-            row["port"],
-            row["service"],
-            row["status"],
-            row["risk"],
-            row["warning"],
-            row["vulnerability"],
-            row["cve_style_tag"],
-            row["banner"]
-        ])
-
-with open("open_ports.csv", "w", newline="", encoding="utf-8") as file:
-    writer = csv.writer(file)
-    writer.writerow(csv_headers)
-
-    for row in open_ports:
-        writer.writerow([
-            row["timestamp"],
-            row["target"],
-            row["port"],
-            row["service"],
-            row["status"],
-            row["risk"],
-            row["warning"],
-            row["vulnerability"],
-            row["cve_style_tag"],
-            row["banner"]
-        ])
+export_csv("scan_results.csv", results)
+export_csv("open_ports.csv", open_ports)
 
 with open("scan_results.json", "w", encoding="utf-8") as json_file:
     json.dump({
-        "scan_time": scan_datetime,
-        "scan_duration_seconds": scan_duration,
-        "security_score": security_score,
+        "summary": summary,
         "targets_scanned": targets_scanned,
-        "summary": {
-            "total_results": len(results),
-            "open_ports": len(open_ports),
-            "high_risk_findings": len(high_risk),
-            "medium_risk_findings": len(medium_risk),
-            "vulnerability_findings": len(vulnerabilities)
-        },
         "results": results
     }, json_file, indent=4)
 
 with open("report.txt", "w", encoding="utf-8") as report:
-    report.write("=== Cybersecurity Port Scanner Report V16 ===\n\n")
-    report.write(f"Scan Time: {scan_datetime}\n")
-    report.write(f"Scan Duration: {scan_duration} seconds\n")
-    report.write(f"Security Score: {security_score}/100\n")
-    report.write(f"Targets Scanned: {len(targets_scanned)}\n")
-    report.write(f"Open Ports: {len(open_ports)}\n")
-    report.write(f"High Risk Findings: {len(high_risk)}\n")
-    report.write(f"Medium Risk Findings: {len(medium_risk)}\n")
-    report.write(f"Vulnerability Findings: {len(vulnerabilities)}\n\n")
+    report.write("=== Cybersecurity Port Scanner Report V20 ===\n\n")
 
-    report.write("=== Detailed Results ===\n\n")
+    for key, value in summary.items():
+        report.write(f"{key}: {value}\n")
+
+    report.write("\n=== Detailed Results ===\n\n")
 
     for row in results:
-        report.write(f"Timestamp: {row['timestamp']}\n")
         report.write(f"Target: {row['target']}\n")
         report.write(f"Port: {row['port']}\n")
         report.write(f"Service: {row['service']}\n")
@@ -350,6 +412,7 @@ with open("report.txt", "w", encoding="utf-8") as report:
         report.write(f"Warning: {row['warning']}\n")
         report.write(f"Vulnerability: {row['vulnerability']}\n")
         report.write(f"CVE-Style Tag: {row['cve_style_tag']}\n")
+        report.write(f"Explanation: {row['explanation']}\n")
         report.write(f"Banner: {row['banner']}\n")
         report.write("--------------------------------\n")
 
@@ -358,27 +421,20 @@ with open("vulnerabilities.txt", "w", encoding="utf-8") as vuln_file:
 
     for row in vulnerabilities:
         vuln_file.write(
-            f"{row['timestamp']} | "
-            f"{row['target']}:{row['port']} | "
-            f"{row['service']} | "
-            f"{row['risk']} | "
-            f"{row['cve_style_tag']} | "
-            f"{row['vulnerability']}\n"
+            f"{row['timestamp']} | {row['target']}:{row['port']} | "
+            f"{row['service']} | {row['risk']} | "
+            f"{row['cve_style_tag']} | {row['vulnerability']}\n"
         )
 
-history_file = "logs/scan_history.txt"
-
-with open(history_file, "a", encoding="utf-8") as history:
+with open("logs/scan_history.txt", "a", encoding="utf-8") as history:
     history.write(
-        f"{scan_datetime} | "
-        f"Targets: {len(targets_scanned)} | "
-        f"Open Ports: {len(open_ports)} | "
-        f"High: {len(high_risk)} | "
-        f"Medium: {len(medium_risk)} | "
-        f"Vulnerabilities: {len(vulnerabilities)} | "
-        f"Score: {security_score}/100 | "
-        f"Duration: {scan_duration}s\n"
+        f"{scan_datetime} | Targets: {len(targets_scanned)} | "
+        f"Open: {len(open_ports)} | High: {len(high_risk)} | "
+        f"Medium: {len(medium_risk)} | Vulnerabilities: {len(vulnerabilities)} | "
+        f"Score: {security_score}/100 | Duration: {scan_duration}s\n"
     )
+
+generate_html_report(summary, results)
 
 print(Fore.CYAN + "\n=== Scan Summary ===")
 print(Fore.CYAN + f"Targets Scanned: {len(targets_scanned)}")
@@ -396,3 +452,4 @@ print(Fore.CYAN + "- scan_results.json")
 print(Fore.CYAN + "- report.txt")
 print(Fore.CYAN + "- vulnerabilities.txt")
 print(Fore.CYAN + "- logs/scan_history.txt")
+print(Fore.CYAN + "- reports/dashboard.html")

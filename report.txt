@@ -1,17 +1,16 @@
-=== Cybersecurity Port Scanner Report V16 ===
+=== Cybersecurity Port Scanner Report V20 ===
 
-Scan Time: 2026-05-17 17:56:28
-Scan Duration: 23.71 seconds
-Security Score: 0/100
-Targets Scanned: 5
-Open Ports: 10
-High Risk Findings: 5
-Medium Risk Findings: 5
-Vulnerability Findings: 10
+scan_time: 2026-05-17 18:31:38
+scan_duration: 42.71
+security_score: 0
+targets_scanned: 5
+open_ports: 10
+high_risk: 5
+medium_risk: 5
+vulnerabilities: 10
 
 === Detailed Results ===
 
-Timestamp: 17:56:41
 Target: 127.0.0.1
 Port: 21
 Service: FTP
@@ -20,9 +19,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:41
 Target: 127.0.0.1
 Port: 22
 Service: SSH
@@ -31,9 +30,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:41
 Target: 127.0.0.1
 Port: 23
 Service: Telnet
@@ -42,9 +41,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:41
 Target: 127.0.0.1
 Port: 25
 Service: SMTP
@@ -53,9 +52,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:41
 Target: 127.0.0.1
 Port: 53
 Service: DNS
@@ -64,9 +63,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:41
 Target: 127.0.0.1
 Port: 80
 Service: HTTP
@@ -75,9 +74,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:41
 Target: 127.0.0.1
 Port: 110
 Service: POP3
@@ -86,9 +85,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:41
 Target: 127.0.0.1
 Port: 135
 Service: Windows RPC
@@ -97,9 +96,9 @@ Risk: MEDIUM
 Warning: Windows RPC exposure should be reviewed.
 Vulnerability: Windows RPC exposure should be reviewed.
 CVE-Style Tag: RPC-EXPOSURE-RISK
+Explanation: Windows RPC on port 135 should be reviewed and protected with firewall rules.
 Banner: No banner received
 --------------------------------
-Timestamp: 17:56:41
 Target: 127.0.0.1
 Port: 139
 Service: NetBIOS
@@ -108,9 +107,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:41
 Target: 127.0.0.1
 Port: 143
 Service: IMAP
@@ -119,9 +118,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:41
 Target: 127.0.0.1
 Port: 443
 Service: HTTPS
@@ -130,9 +129,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:41
 Target: 127.0.0.1
 Port: 445
 Service: SMB
@@ -141,9 +140,9 @@ Risk: HIGH
 Warning: SMB is commonly targeted by ransomware.
 Vulnerability: SMB is commonly targeted by ransomware.
 CVE-Style Tag: SMB-RANSOMWARE-TARGET
+Explanation: SMB on port 445 should be reviewed immediately because it may expose sensitive network services.
 Banner: No banner received
 --------------------------------
-Timestamp: 17:56:41
 Target: 127.0.0.1
 Port: 3306
 Service: MySQL
@@ -152,9 +151,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:41
 Target: 127.0.0.1
 Port: 3389
 Service: RDP
@@ -163,9 +162,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:41
 Target: 127.0.0.1
 Port: 8000
 Service: HTTP/Python Server
@@ -174,9 +173,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:44
 Target: 127.0.0.2
 Port: 21
 Service: FTP
@@ -185,9 +184,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:44
 Target: 127.0.0.2
 Port: 22
 Service: SSH
@@ -196,9 +195,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:44
 Target: 127.0.0.2
 Port: 23
 Service: Telnet
@@ -207,9 +206,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:44
 Target: 127.0.0.2
 Port: 25
 Service: SMTP
@@ -218,9 +217,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:44
 Target: 127.0.0.2
 Port: 53
 Service: DNS
@@ -229,9 +228,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:44
 Target: 127.0.0.2
 Port: 80
 Service: HTTP
@@ -240,9 +239,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:44
 Target: 127.0.0.2
 Port: 110
 Service: POP3
@@ -251,9 +250,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:44
 Target: 127.0.0.2
 Port: 135
 Service: Windows RPC
@@ -262,9 +261,9 @@ Risk: MEDIUM
 Warning: Windows RPC exposure should be reviewed.
 Vulnerability: Windows RPC exposure should be reviewed.
 CVE-Style Tag: RPC-EXPOSURE-RISK
+Explanation: Windows RPC on port 135 should be reviewed and protected with firewall rules.
 Banner: No banner received
 --------------------------------
-Timestamp: 17:56:44
 Target: 127.0.0.2
 Port: 139
 Service: NetBIOS
@@ -273,9 +272,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:44
 Target: 127.0.0.2
 Port: 143
 Service: IMAP
@@ -284,9 +283,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:44
 Target: 127.0.0.2
 Port: 443
 Service: HTTPS
@@ -295,9 +294,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:44
 Target: 127.0.0.2
 Port: 445
 Service: SMB
@@ -306,9 +305,9 @@ Risk: HIGH
 Warning: SMB is commonly targeted by ransomware.
 Vulnerability: SMB is commonly targeted by ransomware.
 CVE-Style Tag: SMB-RANSOMWARE-TARGET
+Explanation: SMB on port 445 should be reviewed immediately because it may expose sensitive network services.
 Banner: No banner received
 --------------------------------
-Timestamp: 17:56:44
 Target: 127.0.0.2
 Port: 3306
 Service: MySQL
@@ -317,9 +316,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:44
 Target: 127.0.0.2
 Port: 3389
 Service: RDP
@@ -328,9 +327,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:44
 Target: 127.0.0.2
 Port: 8000
 Service: HTTP/Python Server
@@ -339,9 +338,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:46
 Target: 127.0.0.3
 Port: 21
 Service: FTP
@@ -350,9 +349,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:46
 Target: 127.0.0.3
 Port: 22
 Service: SSH
@@ -361,9 +360,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:46
 Target: 127.0.0.3
 Port: 23
 Service: Telnet
@@ -372,9 +371,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:46
 Target: 127.0.0.3
 Port: 25
 Service: SMTP
@@ -383,9 +382,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:46
 Target: 127.0.0.3
 Port: 53
 Service: DNS
@@ -394,9 +393,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:46
 Target: 127.0.0.3
 Port: 80
 Service: HTTP
@@ -405,9 +404,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:46
 Target: 127.0.0.3
 Port: 110
 Service: POP3
@@ -416,9 +415,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:46
 Target: 127.0.0.3
 Port: 135
 Service: Windows RPC
@@ -427,9 +426,9 @@ Risk: MEDIUM
 Warning: Windows RPC exposure should be reviewed.
 Vulnerability: Windows RPC exposure should be reviewed.
 CVE-Style Tag: RPC-EXPOSURE-RISK
+Explanation: Windows RPC on port 135 should be reviewed and protected with firewall rules.
 Banner: No banner received
 --------------------------------
-Timestamp: 17:56:46
 Target: 127.0.0.3
 Port: 139
 Service: NetBIOS
@@ -438,9 +437,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:46
 Target: 127.0.0.3
 Port: 143
 Service: IMAP
@@ -449,9 +448,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:46
 Target: 127.0.0.3
 Port: 443
 Service: HTTPS
@@ -460,9 +459,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:46
 Target: 127.0.0.3
 Port: 445
 Service: SMB
@@ -471,9 +470,9 @@ Risk: HIGH
 Warning: SMB is commonly targeted by ransomware.
 Vulnerability: SMB is commonly targeted by ransomware.
 CVE-Style Tag: SMB-RANSOMWARE-TARGET
+Explanation: SMB on port 445 should be reviewed immediately because it may expose sensitive network services.
 Banner: No banner received
 --------------------------------
-Timestamp: 17:56:46
 Target: 127.0.0.3
 Port: 3306
 Service: MySQL
@@ -482,9 +481,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:46
 Target: 127.0.0.3
 Port: 3389
 Service: RDP
@@ -493,9 +492,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:46
 Target: 127.0.0.3
 Port: 8000
 Service: HTTP/Python Server
@@ -504,9 +503,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:48
 Target: 127.0.0.4
 Port: 21
 Service: FTP
@@ -515,9 +514,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:48
 Target: 127.0.0.4
 Port: 22
 Service: SSH
@@ -526,9 +525,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:48
 Target: 127.0.0.4
 Port: 23
 Service: Telnet
@@ -537,9 +536,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:48
 Target: 127.0.0.4
 Port: 25
 Service: SMTP
@@ -548,9 +547,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:48
 Target: 127.0.0.4
 Port: 53
 Service: DNS
@@ -559,9 +558,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:48
 Target: 127.0.0.4
 Port: 80
 Service: HTTP
@@ -570,9 +569,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:48
 Target: 127.0.0.4
 Port: 110
 Service: POP3
@@ -581,9 +580,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:48
 Target: 127.0.0.4
 Port: 135
 Service: Windows RPC
@@ -592,9 +591,9 @@ Risk: MEDIUM
 Warning: Windows RPC exposure should be reviewed.
 Vulnerability: Windows RPC exposure should be reviewed.
 CVE-Style Tag: RPC-EXPOSURE-RISK
+Explanation: Windows RPC on port 135 should be reviewed and protected with firewall rules.
 Banner: No banner received
 --------------------------------
-Timestamp: 17:56:48
 Target: 127.0.0.4
 Port: 139
 Service: NetBIOS
@@ -603,9 +602,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:48
 Target: 127.0.0.4
 Port: 143
 Service: IMAP
@@ -614,9 +613,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:48
 Target: 127.0.0.4
 Port: 443
 Service: HTTPS
@@ -625,9 +624,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:48
 Target: 127.0.0.4
 Port: 445
 Service: SMB
@@ -636,9 +635,9 @@ Risk: HIGH
 Warning: SMB is commonly targeted by ransomware.
 Vulnerability: SMB is commonly targeted by ransomware.
 CVE-Style Tag: SMB-RANSOMWARE-TARGET
+Explanation: SMB on port 445 should be reviewed immediately because it may expose sensitive network services.
 Banner: No banner received
 --------------------------------
-Timestamp: 17:56:48
 Target: 127.0.0.4
 Port: 3306
 Service: MySQL
@@ -647,9 +646,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:48
 Target: 127.0.0.4
 Port: 3389
 Service: RDP
@@ -658,9 +657,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:48
 Target: 127.0.0.4
 Port: 8000
 Service: HTTP/Python Server
@@ -669,9 +668,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:50
 Target: 127.0.0.5
 Port: 21
 Service: FTP
@@ -680,9 +679,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:50
 Target: 127.0.0.5
 Port: 22
 Service: SSH
@@ -691,9 +690,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:50
 Target: 127.0.0.5
 Port: 23
 Service: Telnet
@@ -702,9 +701,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:50
 Target: 127.0.0.5
 Port: 25
 Service: SMTP
@@ -713,9 +712,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:50
 Target: 127.0.0.5
 Port: 53
 Service: DNS
@@ -724,9 +723,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:50
 Target: 127.0.0.5
 Port: 80
 Service: HTTP
@@ -735,9 +734,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:50
 Target: 127.0.0.5
 Port: 110
 Service: POP3
@@ -746,9 +745,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:50
 Target: 127.0.0.5
 Port: 135
 Service: Windows RPC
@@ -757,9 +756,9 @@ Risk: MEDIUM
 Warning: Windows RPC exposure should be reviewed.
 Vulnerability: Windows RPC exposure should be reviewed.
 CVE-Style Tag: RPC-EXPOSURE-RISK
+Explanation: Windows RPC on port 135 should be reviewed and protected with firewall rules.
 Banner: No banner received
 --------------------------------
-Timestamp: 17:56:50
 Target: 127.0.0.5
 Port: 139
 Service: NetBIOS
@@ -768,9 +767,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:50
 Target: 127.0.0.5
 Port: 143
 Service: IMAP
@@ -779,9 +778,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:50
 Target: 127.0.0.5
 Port: 443
 Service: HTTPS
@@ -790,9 +789,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:50
 Target: 127.0.0.5
 Port: 445
 Service: SMB
@@ -801,9 +800,9 @@ Risk: HIGH
 Warning: SMB is commonly targeted by ransomware.
 Vulnerability: SMB is commonly targeted by ransomware.
 CVE-Style Tag: SMB-RANSOMWARE-TARGET
+Explanation: SMB on port 445 should be reviewed immediately because it may expose sensitive network services.
 Banner: No banner received
 --------------------------------
-Timestamp: 17:56:50
 Target: 127.0.0.5
 Port: 3306
 Service: MySQL
@@ -812,9 +811,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:50
 Target: 127.0.0.5
 Port: 3389
 Service: RDP
@@ -823,9 +822,9 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
-Timestamp: 17:56:50
 Target: 127.0.0.5
 Port: 8000
 Service: HTTP/Python Server
@@ -834,5 +833,6 @@ Risk: NONE
 Warning: N/A
 Vulnerability: N/A
 CVE-Style Tag: N/A
+Explanation: N/A
 Banner: N/A
 --------------------------------
