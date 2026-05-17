@@ -1,104 +1,625 @@
-=== Cybersecurity Port Scanner Report V6 ===
+=== Cybersecurity Port Scanner Report V10 ===
 
-Target: scanme.nmap.org
-Total Ports Scanned: 15
-Open Ports: 3
-High Risk Open Ports: 1
-Medium Risk Open Ports: 0
+Scan Time: 2026-05-17 17:06:08
+Scan Duration: 59.27 seconds
+Targets Scanned: 5
+Total Results: 75
+Open Ports: 10
+High Risk Open Ports: 5
+Medium Risk Open Ports: 5
 
 === Detailed Results ===
 
+Target: 127.0.0.1
 Port: 21
 Service: FTP
-Status: OPEN
-Risk: HIGH
-Banner: No banner received
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
 --------------------------------
+Target: 127.0.0.1
 Port: 22
 Service: SSH
-Status: OPEN
-Risk: LOW
-Banner: SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.13
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
 --------------------------------
+Target: 127.0.0.1
 Port: 23
 Service: Telnet
 Status: CLOSED
 Risk: NONE
+Warning: N/A
 Banner: N/A
 --------------------------------
+Target: 127.0.0.1
 Port: 25
 Service: SMTP
 Status: CLOSED
 Risk: NONE
+Warning: N/A
 Banner: N/A
 --------------------------------
+Target: 127.0.0.1
 Port: 53
 Service: DNS
 Status: CLOSED
 Risk: NONE
+Warning: N/A
 Banner: N/A
 --------------------------------
+Target: 127.0.0.1
 Port: 80
 Service: HTTP
-Status: OPEN
-Risk: LOW
-Banner: HTTP/1.1 200 OK
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
 --------------------------------
+Target: 127.0.0.1
 Port: 110
 Service: POP3
 Status: CLOSED
 Risk: NONE
+Warning: N/A
 Banner: N/A
 --------------------------------
+Target: 127.0.0.1
 Port: 135
 Service: Windows RPC
-Status: CLOSED
-Risk: NONE
-Banner: N/A
+Status: OPEN
+Risk: MEDIUM
+Warning: Windows RPC exposure may allow remote exploitation attempts.
+Banner: No banner received
 --------------------------------
+Target: 127.0.0.1
 Port: 139
 Service: NetBIOS
 Status: CLOSED
 Risk: NONE
+Warning: N/A
 Banner: N/A
 --------------------------------
+Target: 127.0.0.1
 Port: 143
 Service: IMAP
 Status: CLOSED
 Risk: NONE
+Warning: N/A
 Banner: N/A
 --------------------------------
+Target: 127.0.0.1
 Port: 443
 Service: HTTPS
 Status: CLOSED
 Risk: NONE
+Warning: N/A
 Banner: N/A
 --------------------------------
+Target: 127.0.0.1
 Port: 445
 Service: SMB
-Status: CLOSED
-Risk: NONE
-Banner: N/A
+Status: OPEN
+Risk: HIGH
+Warning: SMB exposure is commonly targeted by ransomware attacks.
+Banner: No banner received
 --------------------------------
+Target: 127.0.0.1
 Port: 3306
 Service: MySQL
 Status: CLOSED
 Risk: NONE
+Warning: N/A
 Banner: N/A
 --------------------------------
+Target: 127.0.0.1
 Port: 3389
 Service: RDP
 Status: CLOSED
 Risk: NONE
+Warning: N/A
 Banner: N/A
 --------------------------------
+Target: 127.0.0.1
 Port: 8000
 Service: HTTP/Python Server
 Status: CLOSED
 Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.2
+Port: 21
+Service: FTP
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.2
+Port: 22
+Service: SSH
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.2
+Port: 23
+Service: Telnet
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.2
+Port: 25
+Service: SMTP
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.2
+Port: 53
+Service: DNS
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.2
+Port: 80
+Service: HTTP
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.2
+Port: 110
+Service: POP3
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.2
+Port: 135
+Service: Windows RPC
+Status: OPEN
+Risk: MEDIUM
+Warning: Windows RPC exposure may allow remote exploitation attempts.
+Banner: No banner received
+--------------------------------
+Target: 127.0.0.2
+Port: 139
+Service: NetBIOS
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.2
+Port: 143
+Service: IMAP
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.2
+Port: 443
+Service: HTTPS
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.2
+Port: 445
+Service: SMB
+Status: OPEN
+Risk: HIGH
+Warning: SMB exposure is commonly targeted by ransomware attacks.
+Banner: No banner received
+--------------------------------
+Target: 127.0.0.2
+Port: 3306
+Service: MySQL
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.2
+Port: 3389
+Service: RDP
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.2
+Port: 8000
+Service: HTTP/Python Server
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.3
+Port: 21
+Service: FTP
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.3
+Port: 22
+Service: SSH
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.3
+Port: 23
+Service: Telnet
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.3
+Port: 25
+Service: SMTP
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.3
+Port: 53
+Service: DNS
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.3
+Port: 80
+Service: HTTP
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.3
+Port: 110
+Service: POP3
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.3
+Port: 135
+Service: Windows RPC
+Status: OPEN
+Risk: MEDIUM
+Warning: Windows RPC exposure may allow remote exploitation attempts.
+Banner: No banner received
+--------------------------------
+Target: 127.0.0.3
+Port: 139
+Service: NetBIOS
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.3
+Port: 143
+Service: IMAP
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.3
+Port: 443
+Service: HTTPS
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.3
+Port: 445
+Service: SMB
+Status: OPEN
+Risk: HIGH
+Warning: SMB exposure is commonly targeted by ransomware attacks.
+Banner: No banner received
+--------------------------------
+Target: 127.0.0.3
+Port: 3306
+Service: MySQL
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.3
+Port: 3389
+Service: RDP
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.3
+Port: 8000
+Service: HTTP/Python Server
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.4
+Port: 21
+Service: FTP
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.4
+Port: 22
+Service: SSH
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.4
+Port: 23
+Service: Telnet
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.4
+Port: 25
+Service: SMTP
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.4
+Port: 53
+Service: DNS
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.4
+Port: 80
+Service: HTTP
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.4
+Port: 110
+Service: POP3
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.4
+Port: 135
+Service: Windows RPC
+Status: OPEN
+Risk: MEDIUM
+Warning: Windows RPC exposure may allow remote exploitation attempts.
+Banner: No banner received
+--------------------------------
+Target: 127.0.0.4
+Port: 139
+Service: NetBIOS
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.4
+Port: 143
+Service: IMAP
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.4
+Port: 443
+Service: HTTPS
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.4
+Port: 445
+Service: SMB
+Status: OPEN
+Risk: HIGH
+Warning: SMB exposure is commonly targeted by ransomware attacks.
+Banner: No banner received
+--------------------------------
+Target: 127.0.0.4
+Port: 3306
+Service: MySQL
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.4
+Port: 3389
+Service: RDP
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.4
+Port: 8000
+Service: HTTP/Python Server
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.5
+Port: 21
+Service: FTP
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.5
+Port: 22
+Service: SSH
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.5
+Port: 23
+Service: Telnet
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.5
+Port: 25
+Service: SMTP
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.5
+Port: 53
+Service: DNS
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.5
+Port: 80
+Service: HTTP
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.5
+Port: 110
+Service: POP3
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.5
+Port: 135
+Service: Windows RPC
+Status: OPEN
+Risk: MEDIUM
+Warning: Windows RPC exposure may allow remote exploitation attempts.
+Banner: No banner received
+--------------------------------
+Target: 127.0.0.5
+Port: 139
+Service: NetBIOS
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.5
+Port: 143
+Service: IMAP
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.5
+Port: 443
+Service: HTTPS
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.5
+Port: 445
+Service: SMB
+Status: OPEN
+Risk: HIGH
+Warning: SMB exposure is commonly targeted by ransomware attacks.
+Banner: No banner received
+--------------------------------
+Target: 127.0.0.5
+Port: 3306
+Service: MySQL
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.5
+Port: 3389
+Service: RDP
+Status: CLOSED
+Risk: NONE
+Warning: N/A
+Banner: N/A
+--------------------------------
+Target: 127.0.0.5
+Port: 8000
+Service: HTTP/Python Server
+Status: CLOSED
+Risk: NONE
+Warning: N/A
 Banner: N/A
 --------------------------------
 
 === Security Notes ===
 
-WARNING: Port 21 (FTP) is open and considered high risk.
+127.0.0.1:135 (Windows RPC) - Windows RPC exposure may allow remote exploitation attempts.
+127.0.0.1:445 (SMB) - SMB exposure is commonly targeted by ransomware attacks.
+127.0.0.2:135 (Windows RPC) - Windows RPC exposure may allow remote exploitation attempts.
+127.0.0.2:445 (SMB) - SMB exposure is commonly targeted by ransomware attacks.
+127.0.0.3:135 (Windows RPC) - Windows RPC exposure may allow remote exploitation attempts.
+127.0.0.3:445 (SMB) - SMB exposure is commonly targeted by ransomware attacks.
+127.0.0.4:135 (Windows RPC) - Windows RPC exposure may allow remote exploitation attempts.
+127.0.0.4:445 (SMB) - SMB exposure is commonly targeted by ransomware attacks.
+127.0.0.5:135 (Windows RPC) - Windows RPC exposure may allow remote exploitation attempts.
+127.0.0.5:445 (SMB) - SMB exposure is commonly targeted by ransomware attacks.

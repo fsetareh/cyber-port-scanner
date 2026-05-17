@@ -1,0 +1,688 @@
+{
+    "scan_time": "2026-05-17 17:06:08",
+    "scan_duration_seconds": 59.27,
+    "targets_scanned": [
+        "127.0.0.1",
+        "127.0.0.2",
+        "127.0.0.3",
+        "127.0.0.4",
+        "127.0.0.5"
+    ],
+    "results": [
+        {
+            "target": "127.0.0.1",
+            "port": 21,
+            "service": "FTP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.1",
+            "port": 22,
+            "service": "SSH",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.1",
+            "port": 23,
+            "service": "Telnet",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.1",
+            "port": 25,
+            "service": "SMTP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.1",
+            "port": 53,
+            "service": "DNS",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.1",
+            "port": 80,
+            "service": "HTTP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.1",
+            "port": 110,
+            "service": "POP3",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.1",
+            "port": 135,
+            "service": "Windows RPC",
+            "status": "OPEN",
+            "risk": "MEDIUM",
+            "warning": "Windows RPC exposure may allow remote exploitation attempts.",
+            "banner": "No banner received"
+        },
+        {
+            "target": "127.0.0.1",
+            "port": 139,
+            "service": "NetBIOS",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.1",
+            "port": 143,
+            "service": "IMAP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.1",
+            "port": 443,
+            "service": "HTTPS",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.1",
+            "port": 445,
+            "service": "SMB",
+            "status": "OPEN",
+            "risk": "HIGH",
+            "warning": "SMB exposure is commonly targeted by ransomware attacks.",
+            "banner": "No banner received"
+        },
+        {
+            "target": "127.0.0.1",
+            "port": 3306,
+            "service": "MySQL",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.1",
+            "port": 3389,
+            "service": "RDP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.1",
+            "port": 8000,
+            "service": "HTTP/Python Server",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.2",
+            "port": 21,
+            "service": "FTP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.2",
+            "port": 22,
+            "service": "SSH",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.2",
+            "port": 23,
+            "service": "Telnet",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.2",
+            "port": 25,
+            "service": "SMTP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.2",
+            "port": 53,
+            "service": "DNS",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.2",
+            "port": 80,
+            "service": "HTTP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.2",
+            "port": 110,
+            "service": "POP3",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.2",
+            "port": 135,
+            "service": "Windows RPC",
+            "status": "OPEN",
+            "risk": "MEDIUM",
+            "warning": "Windows RPC exposure may allow remote exploitation attempts.",
+            "banner": "No banner received"
+        },
+        {
+            "target": "127.0.0.2",
+            "port": 139,
+            "service": "NetBIOS",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.2",
+            "port": 143,
+            "service": "IMAP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.2",
+            "port": 443,
+            "service": "HTTPS",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.2",
+            "port": 445,
+            "service": "SMB",
+            "status": "OPEN",
+            "risk": "HIGH",
+            "warning": "SMB exposure is commonly targeted by ransomware attacks.",
+            "banner": "No banner received"
+        },
+        {
+            "target": "127.0.0.2",
+            "port": 3306,
+            "service": "MySQL",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.2",
+            "port": 3389,
+            "service": "RDP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.2",
+            "port": 8000,
+            "service": "HTTP/Python Server",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.3",
+            "port": 21,
+            "service": "FTP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.3",
+            "port": 22,
+            "service": "SSH",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.3",
+            "port": 23,
+            "service": "Telnet",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.3",
+            "port": 25,
+            "service": "SMTP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.3",
+            "port": 53,
+            "service": "DNS",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.3",
+            "port": 80,
+            "service": "HTTP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.3",
+            "port": 110,
+            "service": "POP3",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.3",
+            "port": 135,
+            "service": "Windows RPC",
+            "status": "OPEN",
+            "risk": "MEDIUM",
+            "warning": "Windows RPC exposure may allow remote exploitation attempts.",
+            "banner": "No banner received"
+        },
+        {
+            "target": "127.0.0.3",
+            "port": 139,
+            "service": "NetBIOS",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.3",
+            "port": 143,
+            "service": "IMAP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.3",
+            "port": 443,
+            "service": "HTTPS",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.3",
+            "port": 445,
+            "service": "SMB",
+            "status": "OPEN",
+            "risk": "HIGH",
+            "warning": "SMB exposure is commonly targeted by ransomware attacks.",
+            "banner": "No banner received"
+        },
+        {
+            "target": "127.0.0.3",
+            "port": 3306,
+            "service": "MySQL",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.3",
+            "port": 3389,
+            "service": "RDP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.3",
+            "port": 8000,
+            "service": "HTTP/Python Server",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.4",
+            "port": 21,
+            "service": "FTP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.4",
+            "port": 22,
+            "service": "SSH",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.4",
+            "port": 23,
+            "service": "Telnet",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.4",
+            "port": 25,
+            "service": "SMTP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.4",
+            "port": 53,
+            "service": "DNS",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.4",
+            "port": 80,
+            "service": "HTTP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.4",
+            "port": 110,
+            "service": "POP3",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.4",
+            "port": 135,
+            "service": "Windows RPC",
+            "status": "OPEN",
+            "risk": "MEDIUM",
+            "warning": "Windows RPC exposure may allow remote exploitation attempts.",
+            "banner": "No banner received"
+        },
+        {
+            "target": "127.0.0.4",
+            "port": 139,
+            "service": "NetBIOS",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.4",
+            "port": 143,
+            "service": "IMAP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.4",
+            "port": 443,
+            "service": "HTTPS",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.4",
+            "port": 445,
+            "service": "SMB",
+            "status": "OPEN",
+            "risk": "HIGH",
+            "warning": "SMB exposure is commonly targeted by ransomware attacks.",
+            "banner": "No banner received"
+        },
+        {
+            "target": "127.0.0.4",
+            "port": 3306,
+            "service": "MySQL",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.4",
+            "port": 3389,
+            "service": "RDP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.4",
+            "port": 8000,
+            "service": "HTTP/Python Server",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.5",
+            "port": 21,
+            "service": "FTP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.5",
+            "port": 22,
+            "service": "SSH",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.5",
+            "port": 23,
+            "service": "Telnet",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.5",
+            "port": 25,
+            "service": "SMTP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.5",
+            "port": 53,
+            "service": "DNS",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.5",
+            "port": 80,
+            "service": "HTTP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.5",
+            "port": 110,
+            "service": "POP3",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.5",
+            "port": 135,
+            "service": "Windows RPC",
+            "status": "OPEN",
+            "risk": "MEDIUM",
+            "warning": "Windows RPC exposure may allow remote exploitation attempts.",
+            "banner": "No banner received"
+        },
+        {
+            "target": "127.0.0.5",
+            "port": 139,
+            "service": "NetBIOS",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.5",
+            "port": 143,
+            "service": "IMAP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.5",
+            "port": 443,
+            "service": "HTTPS",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.5",
+            "port": 445,
+            "service": "SMB",
+            "status": "OPEN",
+            "risk": "HIGH",
+            "warning": "SMB exposure is commonly targeted by ransomware attacks.",
+            "banner": "No banner received"
+        },
+        {
+            "target": "127.0.0.5",
+            "port": 3306,
+            "service": "MySQL",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.5",
+            "port": 3389,
+            "service": "RDP",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        },
+        {
+            "target": "127.0.0.5",
+            "port": 8000,
+            "service": "HTTP/Python Server",
+            "status": "CLOSED",
+            "risk": "NONE",
+            "warning": "N/A",
+            "banner": "N/A"
+        }
+    ]
+}
