@@ -1,5 +1,5 @@
 # Cybersecurity Port Scanner Project
-# Version 5 - Multithreaded Scanner + Service Detection + Banner Grabbing + CSV Export + Risk Levels
+# Version 6 - CSV Export + Text Report + Security Summary
 
 import socket
 import threading
@@ -49,7 +49,7 @@ RISK_LEVELS = {
 results = []
 lock = threading.Lock()
 
-print(Fore.CYAN + "=== Cybersecurity Port Scanner V5 ===")
+print(Fore.CYAN + "=== Cybersecurity Port Scanner V6 ===")
 print(Fore.CYAN + f"Scanning target: {TARGET}\n")
 
 
@@ -58,12 +58,7 @@ def grab_banner(sock):
         sock.settimeout(2)
         sock.send(b"HEAD / HTTP/1.1\r\nHost: localhost\r\n\r\n")
         banner = sock.recv(1024).decode(errors="ignore").strip()
-
-        if banner:
-            return banner.split("\n")[0]
-
-        return "No banner received"
-
+        return banner.split("\n")[0] if banner else "No banner received"
     except Exception:
         return "No banner received"
 
@@ -89,14 +84,10 @@ def scan_port(port, service):
             status = "OPEN"
             risk = RISK_LEVELS.get(port, "UNKNOWN")
             banner = grab_banner(sock)
-            risk_color = get_risk_color(risk)
+            color = get_risk_color(risk)
 
             with lock:
-                print(
-                    risk_color
-                    + f"[OPEN] Port {port} | Service: {service} | Risk: {risk}"
-                )
-
+                print(color + f"[OPEN] Port {port} | Service: {service} | Risk: {risk}")
                 if banner != "No banner received":
                     print(Fore.YELLOW + f"Banner: {banner}")
 
@@ -111,55 +102,61 @@ def scan_port(port, service):
         sock.close()
 
         with lock:
-            results.append([
-                port,
-                service,
-                status,
-                risk,
-                banner
-            ])
+            results.append([port, service, status, risk, banner])
 
     except Exception as error:
         with lock:
             print(Fore.YELLOW + f"[ERROR] Port {port} -> {error}")
-
-            results.append([
-                port,
-                service,
-                "ERROR",
-                "UNKNOWN",
-                str(error)
-            ])
+            results.append([port, service, "ERROR", "UNKNOWN", str(error)])
 
 
 threads = []
 
 for port, service in PORTS.items():
-    thread = threading.Thread(
-        target=scan_port,
-        args=(port, service)
-    )
-
+    thread = threading.Thread(target=scan_port, args=(port, service))
     threads.append(thread)
     thread.start()
 
 for thread in threads:
     thread.join()
 
+results.sort(key=lambda row: row[0])
 
 with open("scan_results.csv", "w", newline="", encoding="utf-8") as file:
     writer = csv.writer(file)
-
-    writer.writerow([
-        "Port",
-        "Service",
-        "Status",
-        "Risk",
-        "Banner"
-    ])
-
+    writer.writerow(["Port", "Service", "Status", "Risk", "Banner"])
     writer.writerows(results)
 
+open_ports = [row for row in results if row[2] == "OPEN"]
+high_risk_open_ports = [row for row in open_ports if row[3] == "HIGH"]
+medium_risk_open_ports = [row for row in open_ports if row[3] == "MEDIUM"]
+
+with open("report.txt", "w", encoding="utf-8") as report:
+    report.write("=== Cybersecurity Port Scanner Report V6 ===\n\n")
+    report.write(f"Target: {TARGET}\n")
+    report.write(f"Total Ports Scanned: {len(results)}\n")
+    report.write(f"Open Ports: {len(open_ports)}\n")
+    report.write(f"High Risk Open Ports: {len(high_risk_open_ports)}\n")
+    report.write(f"Medium Risk Open Ports: {len(medium_risk_open_ports)}\n\n")
+
+    report.write("=== Detailed Results ===\n\n")
+
+    for port, service, status, risk, banner in results:
+        report.write(f"Port: {port}\n")
+        report.write(f"Service: {service}\n")
+        report.write(f"Status: {status}\n")
+        report.write(f"Risk: {risk}\n")
+        report.write(f"Banner: {banner}\n")
+        report.write("--------------------------------\n")
+
+    report.write("\n=== Security Notes ===\n\n")
+
+    for port, service, status, risk, banner in results:
+        if status == "OPEN" and risk == "HIGH":
+            report.write(f"WARNING: Port {port} ({service}) is open and considered high risk.\n")
+        elif status == "OPEN" and risk == "MEDIUM":
+            report.write(f"NOTICE: Port {port} ({service}) is open and should be reviewed.\n")
 
 print(Fore.CYAN + "\nScan completed.")
 print(Fore.CYAN + "Results saved to scan_results.csv")
+print(Fore.CYAN + "Security report saved to report.txt")
