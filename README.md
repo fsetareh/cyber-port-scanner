@@ -1,32 +1,119 @@
-# Cyber Port Scanner
+# Cybersecurity Port Scanner
 
-A Python-based cybersecurity and network analysis tool designed to simulate basic SOC (Security Operations Center) activities.
+A SOC-style Python cybersecurity tool designed to perform port scanning, risk analysis, vulnerability detection, reporting, and dashboard generation.
 
-This project performs TCP port scanning, service detection, risk classification, banner grabbing, report generation, and CSV export.
+This project evolved from a basic socket-based scanner (V1) into a multi-feature cybersecurity assessment tool (V20) with HTML dashboards, JSON exports, CVE-style tagging, logging systems, and advanced reporting features.
 
 ---
 
 # Features
 
-- Multi-threaded TCP port scanning
-- Custom IP/domain scanning
-- Service detection
-- Risk classification (LOW / MEDIUM / HIGH)
+## Core Scanning Features
+- Single target scanning
+- Local IP range scanning
+- Multi-threaded scanning
 - Banner grabbing
-- CSV export
-- Security report generation
-- Colored terminal output
-- Cross-platform support (Windows/macOS)
+- Open/closed port detection
+- Service identification
+- Timestamped scan results
+
+---
+
+# Risk Analysis
+
+The scanner classifies findings into:
+- HIGH risk
+- MEDIUM risk
+- NONE
+
+Example:
+- SMB (445) → HIGH
+- Windows RPC (135) → MEDIUM
+
+---
+
+# Vulnerability Detection
+
+The scanner performs basic vulnerability-style analysis and generates:
+- Warning messages
+- Vulnerability alerts
+- CVE-style tags
+
+Examples:
+- SMB-RANSOMWARE-TARGET
+- RPC-EXPOSURE-RISK
+
+---
+
+# Exported Reports
+
+The project automatically generates multiple report formats:
+
+| File | Description |
+|------|-------------|
+| `scan_results.csv` | Full scan results |
+| `open_ports.csv` | Open ports only |
+| `scan_results.json` | JSON export |
+| `report.txt` | Full security report |
+| `vulnerabilities.txt` | Vulnerability findings |
+| `logs/scan_history.txt` | Scan history logs |
+| `reports/dashboard.html` | Interactive HTML dashboard |
+
+---
+
+# HTML Dashboard
+
+The project generates a professional dark-themed HTML dashboard including:
+- Security score
+- Risk summaries
+- Vulnerability findings
+- Detailed scan table
+- CVE-style tags
+
+## Dashboard Preview
+
+![Dashboard](reports/dashboard-preview.png)
 
 ---
 
 # Technologies Used
 
 - Python 3
-- socket
-- threading
-- csv
-- colorama
+- Socket Programming
+- Threading
+- CSV
+- JSON
+- HTML/CSS
+- File Handling
+- Cybersecurity Concepts
+
+---
+
+# Project Evolution (V1 → V20)
+
+## V1–V5
+- Basic socket scanning
+- Service detection
+- Colored terminal output
+
+## V6–V10
+- IP range scanning
+- Risk classification
+- Warning system
+- Vulnerability detection
+
+## V11–V15
+- JSON exports
+- Security scoring
+- CVE-style tags
+- Scan history logging
+
+## V16–V20
+- HTML dashboard
+- Advanced reports
+- Open-port exports
+- SOC-style workflow
+- Dashboard visualization
 
 ---
 
@@ -38,7 +125,7 @@ Clone the repository:
 git clone https://github.com/fsetareh/cyber-port-scanner.git
 ```
 
-Go into the project folder:
+Move into the project folder:
 
 ```bash
 cd cyber-port-scanner
@@ -50,92 +137,92 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
----
-
-# How to Run
-
 Run the scanner:
 
 ```bash
 python scanner.py
 ```
 
-Enter target IP or domain:
+---
+
+# Example Scan Modes
+
+## Single Target Scan
+
+```text
+1. Single target
+```
+
+Example:
 
 ```text
 127.0.0.1
 ```
 
-or
+---
+
+## Local IP Range Scan
 
 ```text
-scanme.nmap.org
+2. Local IP range
+```
+
+Example:
+
+```text
+Base IP: 127.0.0.
+Start: 1
+End: 5
 ```
 
 ---
 
-# Sample Output
+# Example Output
 
 ```text
-[OPEN] Port 445 | Service: SMB | Risk: HIGH
-[OPEN] Port 135 | Service: Windows RPC | Risk: MEDIUM
-
-Scan completed.
-Results saved to scan_results.csv
-Security report saved to report.txt
+[OPEN] 127.0.0.1:445 | SMB | Risk: HIGH
+[WARNING] SMB is commonly targeted by ransomware.
+[CVE-LIKE] SMB-RANSOMWARE-TARGET
 ```
 
 ---
 
-# Generated Files
+# Security Score
 
-## scan_results.csv
-
-Contains:
-
-- Port
-- Service
-- Status
-- Risk level
-- Banner information
-
-## report.txt
-
-Contains:
-
-- Scan summary
+The scanner calculates a basic security score based on:
 - Open ports
-- Risk analysis
-- Detailed scan results
-- Security warnings
-
----
-
-# Security Notes
-
-This project is intended for:
-
-- Educational purposes
-- Cybersecurity learning
-- Network analysis practice
-- SOC workflow simulation
-
-Only scan systems you own or have permission to test.
+- Risk findings
+- Vulnerability detections
 
 ---
 
 # Future Improvements
 
-- Subnet scanning
-- JSON export
-- Vulnerability detection
-- Stealth scanning
+Planned future versions may include:
 - Real-time monitoring
-- GUI dashboard
-- Web interface
+- Flask web application
+- Live charts
+- SQLite database logging
+- Email alert system
+- CVE API integration
+- Nmap integration
+- Packet sniffing
+- Threat intelligence feeds
+- Authentication system
+
+---
+
+# Educational Purpose
+
+This project was developed for cybersecurity learning, portfolio development, and SOC workflow simulation purposes only.
+
+Use responsibly and only on systems you own or are authorized to test.
 
 ---
 
 # Author
 
 Fatemeh Setareh
+
+GitHub:
+https://github.com/fsetareh
