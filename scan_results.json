@@ -1,6 +1,6 @@
 {
-    "scan_time": "2026-05-17 17:06:08",
-    "scan_duration_seconds": 59.27,
+    "scan_time": "2026-05-17 17:18:02",
+    "scan_duration_seconds": 32.86,
     "targets_scanned": [
         "127.0.0.1",
         "127.0.0.2",
@@ -8,6 +8,13 @@
         "127.0.0.4",
         "127.0.0.5"
     ],
+    "summary": {
+        "total_results": 75,
+        "open_ports": 10,
+        "high_risk_findings": 5,
+        "medium_risk_findings": 5,
+        "vulnerability_findings": 10
+    },
     "results": [
         {
             "target": "127.0.0.1",
@@ -16,6 +23,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -25,6 +33,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -34,6 +43,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -43,6 +53,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -52,6 +63,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -61,6 +73,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -70,6 +83,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -79,6 +93,7 @@
             "status": "OPEN",
             "risk": "MEDIUM",
             "warning": "Windows RPC exposure may allow remote exploitation attempts.",
+            "vulnerability": "Potential Windows RPC exposure detected.",
             "banner": "No banner received"
         },
         {
@@ -88,6 +103,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -97,6 +113,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -106,6 +123,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -115,6 +133,7 @@
             "status": "OPEN",
             "risk": "HIGH",
             "warning": "SMB exposure is commonly targeted by ransomware attacks.",
+            "vulnerability": "Potential SMB exposure detected. Common ransomware target.",
             "banner": "No banner received"
         },
         {
@@ -124,6 +143,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -133,6 +153,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -142,6 +163,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -151,6 +173,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -160,6 +183,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -169,6 +193,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -178,6 +203,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -187,6 +213,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -196,6 +223,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -205,6 +233,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -214,6 +243,7 @@
             "status": "OPEN",
             "risk": "MEDIUM",
             "warning": "Windows RPC exposure may allow remote exploitation attempts.",
+            "vulnerability": "Potential Windows RPC exposure detected.",
             "banner": "No banner received"
         },
         {
@@ -223,6 +253,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -232,6 +263,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -241,6 +273,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -250,6 +283,7 @@
             "status": "OPEN",
             "risk": "HIGH",
             "warning": "SMB exposure is commonly targeted by ransomware attacks.",
+            "vulnerability": "Potential SMB exposure detected. Common ransomware target.",
             "banner": "No banner received"
         },
         {
@@ -259,6 +293,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -268,6 +303,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -277,6 +313,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -286,6 +323,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -295,6 +333,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -304,6 +343,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -313,6 +353,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -322,6 +363,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -331,6 +373,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -340,6 +383,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -349,6 +393,7 @@
             "status": "OPEN",
             "risk": "MEDIUM",
             "warning": "Windows RPC exposure may allow remote exploitation attempts.",
+            "vulnerability": "Potential Windows RPC exposure detected.",
             "banner": "No banner received"
         },
         {
@@ -358,6 +403,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -367,6 +413,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -376,6 +423,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -385,6 +433,7 @@
             "status": "OPEN",
             "risk": "HIGH",
             "warning": "SMB exposure is commonly targeted by ransomware attacks.",
+            "vulnerability": "Potential SMB exposure detected. Common ransomware target.",
             "banner": "No banner received"
         },
         {
@@ -394,6 +443,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -403,6 +453,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -412,6 +463,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -421,6 +473,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -430,6 +483,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -439,6 +493,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -448,6 +503,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -457,6 +513,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -466,6 +523,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -475,6 +533,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -484,6 +543,7 @@
             "status": "OPEN",
             "risk": "MEDIUM",
             "warning": "Windows RPC exposure may allow remote exploitation attempts.",
+            "vulnerability": "Potential Windows RPC exposure detected.",
             "banner": "No banner received"
         },
         {
@@ -493,6 +553,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -502,6 +563,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -511,6 +573,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -520,6 +583,7 @@
             "status": "OPEN",
             "risk": "HIGH",
             "warning": "SMB exposure is commonly targeted by ransomware attacks.",
+            "vulnerability": "Potential SMB exposure detected. Common ransomware target.",
             "banner": "No banner received"
         },
         {
@@ -529,6 +593,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -538,6 +603,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -547,6 +613,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -556,6 +623,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -565,6 +633,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -574,6 +643,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -583,6 +653,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -592,6 +663,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -601,6 +673,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -610,6 +683,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -619,6 +693,7 @@
             "status": "OPEN",
             "risk": "MEDIUM",
             "warning": "Windows RPC exposure may allow remote exploitation attempts.",
+            "vulnerability": "Potential Windows RPC exposure detected.",
             "banner": "No banner received"
         },
         {
@@ -628,6 +703,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -637,6 +713,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -646,6 +723,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -655,6 +733,7 @@
             "status": "OPEN",
             "risk": "HIGH",
             "warning": "SMB exposure is commonly targeted by ransomware attacks.",
+            "vulnerability": "Potential SMB exposure detected. Common ransomware target.",
             "banner": "No banner received"
         },
         {
@@ -664,6 +743,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -673,6 +753,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         },
         {
@@ -682,6 +763,7 @@
             "status": "CLOSED",
             "risk": "NONE",
             "warning": "N/A",
+            "vulnerability": "N/A",
             "banner": "N/A"
         }
     ]

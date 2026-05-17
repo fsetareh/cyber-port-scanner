@@ -1,5 +1,5 @@
 # Cybersecurity Port Scanner Project
-# Version 10 - Timestamp + Duration + JSON Export + Summary
+# Version 11 - Vulnerability Detection Engine
 
 import socket
 import threading
@@ -48,13 +48,23 @@ RISK_LEVELS = {
 }
 
 VULNERABILITY_WARNINGS = {
-    21: "FTP is insecure because credentials are transmitted in plain text.",
+    21: "FTP is insecure because credentials may be transmitted in plain text.",
     23: "Telnet is highly insecure because all traffic is unencrypted.",
     135: "Windows RPC exposure may allow remote exploitation attempts.",
     139: "NetBIOS exposure may leak system information to attackers.",
     445: "SMB exposure is commonly targeted by ransomware attacks.",
     3306: "MySQL exposed to networks may allow unauthorized database access.",
-    3389: "RDP exposure may allow brute-force login attacks."
+    3389: "RDP exposure may allow brute-force login attempts."
+}
+
+VULNERABILITY_FINDINGS = {
+    21: "Potential insecure file transfer service exposed.",
+    23: "Potential insecure remote access service exposed.",
+    135: "Potential Windows RPC exposure detected.",
+    139: "Potential NetBIOS information exposure detected.",
+    445: "Potential SMB exposure detected. Common ransomware target.",
+    3306: "Potential database exposure detected.",
+    3389: "Potential remote desktop exposure detected."
 }
 
 results = []
@@ -91,6 +101,13 @@ def grab_banner(target, port):
         return "No banner received"
 
 
+def detect_vulnerability(port, status):
+    if status == "OPEN" and port in VULNERABILITY_FINDINGS:
+        return VULNERABILITY_FINDINGS[port]
+
+    return "No vulnerability detected"
+
+
 def scan_port(target, port, service):
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -103,13 +120,17 @@ def scan_port(target, port, service):
             risk = RISK_LEVELS.get(port, "UNKNOWN")
             banner = grab_banner(target, port)
             warning = VULNERABILITY_WARNINGS.get(port, "No known critical warning")
+            vulnerability = detect_vulnerability(port, status)
             color = get_risk_color(risk)
 
             with lock:
                 print(color + f"[OPEN] {target}:{port} | Service: {service} | Risk: {risk}")
 
-                if port in VULNERABILITY_WARNINGS:
+                if warning != "No known critical warning":
                     print(Fore.YELLOW + f"[WARNING] {warning}")
+
+                if vulnerability != "No vulnerability detected":
+                    print(Fore.RED + f"[VULNERABILITY] {vulnerability}")
 
                 if banner != "No banner received":
                     print(Fore.YELLOW + f"Banner: {banner}")
@@ -119,6 +140,7 @@ def scan_port(target, port, service):
             risk = "NONE"
             banner = "N/A"
             warning = "N/A"
+            vulnerability = "N/A"
 
             with lock:
                 print(Fore.RED + f"[CLOSED] {target}:{port} | Service: {service}")
@@ -133,6 +155,7 @@ def scan_port(target, port, service):
                 "status": status,
                 "risk": risk,
                 "warning": warning,
+                "vulnerability": vulnerability,
                 "banner": banner
             })
 
@@ -147,6 +170,7 @@ def scan_port(target, port, service):
                 "status": "ERROR",
                 "risk": "UNKNOWN",
                 "warning": "N/A",
+                "vulnerability": "N/A",
                 "banner": str(error)
             })
 
@@ -179,8 +203,8 @@ def generate_ip_range(base_ip, start, end):
 
 
 print(Fore.CYAN + "=====================================")
-print(Fore.CYAN + " CYBERSECURITY PORT SCANNER V10")
-print(Fore.CYAN + " Mini SOC Simulation Tool")
+print(Fore.CYAN + " CYBERSECURITY PORT SCANNER V11")
+print(Fore.CYAN + " Vulnerability Detection Engine")
 print(Fore.CYAN + "=====================================")
 print("Scan Mode:")
 print("1. Single target")
@@ -224,10 +248,24 @@ scan_duration = round(scan_end_time - scan_start_time, 2)
 open_ports = [row for row in results if row["status"] == "OPEN"]
 high_risk_open_ports = [row for row in open_ports if row["risk"] == "HIGH"]
 medium_risk_open_ports = [row for row in open_ports if row["risk"] == "MEDIUM"]
+vulnerability_findings = [
+    row for row in results
+    if row["vulnerability"] not in ["N/A", "No vulnerability detected"]
+]
 
 with open("scan_results.csv", "w", newline="", encoding="utf-8") as file:
     writer = csv.writer(file)
-    writer.writerow(["Target", "Port", "Service", "Status", "Risk", "Warning", "Banner"])
+
+    writer.writerow([
+        "Target",
+        "Port",
+        "Service",
+        "Status",
+        "Risk",
+        "Warning",
+        "Vulnerability",
+        "Banner"
+    ])
 
     for row in results:
         writer.writerow([
@@ -237,6 +275,7 @@ with open("scan_results.csv", "w", newline="", encoding="utf-8") as file:
             row["status"],
             row["risk"],
             row["warning"],
+            row["vulnerability"],
             row["banner"]
         ])
 
@@ -246,6 +285,13 @@ with open("scan_results.json", "w", encoding="utf-8") as json_file:
             "scan_time": scan_datetime,
             "scan_duration_seconds": scan_duration,
             "targets_scanned": targets_scanned,
+            "summary": {
+                "total_results": len(results),
+                "open_ports": len(open_ports),
+                "high_risk_findings": len(high_risk_open_ports),
+                "medium_risk_findings": len(medium_risk_open_ports),
+                "vulnerability_findings": len(vulnerability_findings)
+            },
             "results": results
         },
         json_file,
@@ -253,14 +299,15 @@ with open("scan_results.json", "w", encoding="utf-8") as json_file:
     )
 
 with open("report.txt", "w", encoding="utf-8") as report:
-    report.write("=== Cybersecurity Port Scanner Report V10 ===\n\n")
+    report.write("=== Cybersecurity Port Scanner Report V11 ===\n\n")
     report.write(f"Scan Time: {scan_datetime}\n")
     report.write(f"Scan Duration: {scan_duration} seconds\n")
     report.write(f"Targets Scanned: {len(targets_scanned)}\n")
     report.write(f"Total Results: {len(results)}\n")
     report.write(f"Open Ports: {len(open_ports)}\n")
     report.write(f"High Risk Open Ports: {len(high_risk_open_ports)}\n")
-    report.write(f"Medium Risk Open Ports: {len(medium_risk_open_ports)}\n\n")
+    report.write(f"Medium Risk Open Ports: {len(medium_risk_open_ports)}\n")
+    report.write(f"Vulnerability Findings: {len(vulnerability_findings)}\n\n")
 
     report.write("=== Detailed Results ===\n\n")
 
@@ -271,22 +318,24 @@ with open("report.txt", "w", encoding="utf-8") as report:
         report.write(f"Status: {row['status']}\n")
         report.write(f"Risk: {row['risk']}\n")
         report.write(f"Warning: {row['warning']}\n")
+        report.write(f"Vulnerability: {row['vulnerability']}\n")
         report.write(f"Banner: {row['banner']}\n")
         report.write("--------------------------------\n")
 
-    report.write("\n=== Security Notes ===\n\n")
+    report.write("\n=== Vulnerability Notes ===\n\n")
 
-    for row in results:
-        if row["status"] == "OPEN" and row["warning"] != "N/A":
-            report.write(
-                f"{row['target']}:{row['port']} ({row['service']}) - {row['warning']}\n"
-            )
+    for row in vulnerability_findings:
+        report.write(
+            f"{row['target']}:{row['port']} ({row['service']}) - "
+            f"{row['vulnerability']}\n"
+        )
 
 print(Fore.CYAN + "\n=== Scan Summary ===")
 print(Fore.CYAN + f"Targets Scanned: {len(targets_scanned)}")
 print(Fore.CYAN + f"Open Ports Found: {len(open_ports)}")
 print(Fore.RED + f"High Risk Findings: {len(high_risk_open_ports)}")
 print(Fore.YELLOW + f"Medium Risk Findings: {len(medium_risk_open_ports)}")
+print(Fore.RED + f"Vulnerability Findings: {len(vulnerability_findings)}")
 print(Fore.CYAN + f"Scan Duration: {scan_duration} seconds")
 
 print(Fore.CYAN + "\nScan completed.")
