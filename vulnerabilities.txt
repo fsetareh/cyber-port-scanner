@@ -1,0 +1,12 @@
+=== Vulnerability Findings ===
+
+17:56:41 | 127.0.0.1:135 | Windows RPC | MEDIUM | RPC-EXPOSURE-RISK | Windows RPC exposure should be reviewed.
+17:56:41 | 127.0.0.1:445 | SMB | HIGH | SMB-RANSOMWARE-TARGET | SMB is commonly targeted by ransomware.
+17:56:44 | 127.0.0.2:135 | Windows RPC | MEDIUM | RPC-EXPOSURE-RISK | Windows RPC exposure should be reviewed.
+17:56:44 | 127.0.0.2:445 | SMB | HIGH | SMB-RANSOMWARE-TARGET | SMB is commonly targeted by ransomware.
+17:56:46 | 127.0.0.3:135 | Windows RPC | MEDIUM | RPC-EXPOSURE-RISK | Windows RPC exposure should be reviewed.
+17:56:46 | 127.0.0.3:445 | SMB | HIGH | SMB-RANSOMWARE-TARGET | SMB is commonly targeted by ransomware.
+17:56:48 | 127.0.0.4:135 | Windows RPC | MEDIUM | RPC-EXPOSURE-RISK | Windows RPC exposure should be reviewed.
+17:56:48 | 127.0.0.4:445 | SMB | HIGH | SMB-RANSOMWARE-TARGET | SMB is commonly targeted by ransomware.
+17:56:50 | 127.0.0.5:135 | Windows RPC | MEDIUM | RPC-EXPOSURE-RISK | Windows RPC exposure should be reviewed.
+17:56:50 | 127.0.0.5:445 | SMB | HIGH | SMB-RANSOMWARE-TARGET | SMB is commonly targeted by ransomware.

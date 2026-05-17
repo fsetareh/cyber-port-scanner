@@ -1,0 +1,11 @@
+Timestamp,Target,Port,Service,Status,Risk,Warning,Vulnerability,CVE-Style Tag,Banner
+17:56:41,127.0.0.1,135,Windows RPC,OPEN,MEDIUM,Windows RPC exposure should be reviewed.,Windows RPC exposure should be reviewed.,RPC-EXPOSURE-RISK,No banner received
+17:56:41,127.0.0.1,445,SMB,OPEN,HIGH,SMB is commonly targeted by ransomware.,SMB is commonly targeted by ransomware.,SMB-RANSOMWARE-TARGET,No banner received
+17:56:44,127.0.0.2,135,Windows RPC,OPEN,MEDIUM,Windows RPC exposure should be reviewed.,Windows RPC exposure should be reviewed.,RPC-EXPOSURE-RISK,No banner received
+17:56:44,127.0.0.2,445,SMB,OPEN,HIGH,SMB is commonly targeted by ransomware.,SMB is commonly targeted by ransomware.,SMB-RANSOMWARE-TARGET,No banner received
+17:56:46,127.0.0.3,135,Windows RPC,OPEN,MEDIUM,Windows RPC exposure should be reviewed.,Windows RPC exposure should be reviewed.,RPC-EXPOSURE-RISK,No banner received
+17:56:46,127.0.0.3,445,SMB,OPEN,HIGH,SMB is commonly targeted by ransomware.,SMB is commonly targeted by ransomware.,SMB-RANSOMWARE-TARGET,No banner received
+17:56:48,127.0.0.4,135,Windows RPC,OPEN,MEDIUM,Windows RPC exposure should be reviewed.,Windows RPC exposure should be reviewed.,RPC-EXPOSURE-RISK,No banner received
+17:56:48,127.0.0.4,445,SMB,OPEN,HIGH,SMB is commonly targeted by ransomware.,SMB is commonly targeted by ransomware.,SMB-RANSOMWARE-TARGET,No banner received
+17:56:50,127.0.0.5,135,Windows RPC,OPEN,MEDIUM,Windows RPC exposure should be reviewed.,Windows RPC exposure should be reviewed.,RPC-EXPOSURE-RISK,No banner received
+17:56:50,127.0.0.5,445,SMB,OPEN,HIGH,SMB is commonly targeted by ransomware.,SMB is commonly targeted by ransomware.,SMB-RANSOMWARE-TARGET,No banner received
